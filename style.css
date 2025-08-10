@@ -1,43 +1,48 @@
+:root{
+  --brand: #0d6efd;
+  --bg: #f7f8fb;
+}
+
+/* Base */
+html, body { scroll-behavior: smooth; }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    line-height: 1.6;
-    margin-top: 70px; /* Offset for fixed navbar */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--bg);
+  line-height: 1.65;
+  margin: 0;
+  padding-top: 70px; /* fixed nav offset */
 }
 
-h1, h2, h3, h4 {
-    font-weight: 600;
-    margin-bottom: 20px;
+/* Sections */
+.section-pad { padding: 72px 0; }
+.section-head h2 {
+  font-weight: 700;
+  margin-bottom: .25rem;
+}
+.section-head p { margin: 0 0 1.25rem; }
+
+/* Hero */
+.hero-section{
+  min-height: 68vh;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35)),
+    url('banner-image.jpg') center/cover no-repeat;
+}
+.hero-section .badge.bg-success-soft{
+  background: rgba(25,135,84,.15);
+  border: 1px solid rgba(25,135,84,.3);
 }
 
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('banner-image.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* Cards */
+.card{ transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover{ transform: translateY(-4px); box-shadow: 0 1.25rem 2rem rgba(0,0,0,.08)!important; }
+.rounded-4{ border-radius: 1rem; }
 
-section h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
+/* Avatar placeholder in Contact */
+.avatar{ width: 64px; height: 64px; }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
+/* Footer */
+footer a:hover{ color: #fff; }
 
-.accordion-item {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 10px 0;
-    bottom: 0;
-    width: 100%;
-}
+/* Utilities */
+.text-white-75{ color: rgba(255,255,255,.75); }
