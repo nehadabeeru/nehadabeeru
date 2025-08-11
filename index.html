@@ -1,80 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neha Dabeeru - Software Engineer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neha Dabeeru · Software Engineer</title>
+  <meta name="description" content="Portfolio of Neha Dabeeru — Full-Stack & Cloud Engineer, AWS Certified Data Engineer – Associate." />
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <header class="fade-in">
-    <div class="container">
-      <h1>Neha Dabeeru</h1>
-      <p class="tagline">Actively Seeking SDE Roles | Full-Stack Developer | AWS Certified | San Jose State University</p>
+  <!-- Sticky Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Home">Neha Dabeeru</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--sm btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Download Resume</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <section class="about container fade-in">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate software engineer with expertise in full-stack development, cloud computing, and data-driven applications. 
-      Currently at <strong>CS Optima Inc</strong>, I design and implement intelligent eCRF workflows and CSV ingestion pipelines 
-      using AWS services (Lambda, Step Functions, DynamoDB, S3, RDS). My work focuses on building scalable, event-driven systems 
-      with automated schema detection, domain inference, and seamless integration into clinical data platforms.
-    </p>
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="container hero__inner reveal">
+      <div class="hero__copy">
+        <span class="pill">Open to SDE & Full-Stack roles</span>
+        <h1 class="hero__title">
+          <span class="serif">Neha Dabeeru</span>
+          <span class="role">
+            <span class="role__static">I build</span>
+            <span class="role__typing" data-rotate='[
+              "cloud-native systems.",
+              "full-stack products.",
+              "serverless data pipelines.",
+              "accessible, fast UIs."
+            ]'></span>
+          </span>
+        </h1>
+        <p class="lead">
+          Full-Stack & Cloud Engineer • AWS Certified Data Engineer – Associate •
+          M.S. (Data Science) — San José State University. I design reliable, secure, and
+          measurable software — from Angular/React frontends to AWS-backed data workflows.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn btn--ghost" href="mailto:nehadabeeru04@gmail.com">Email Me</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat__value">40%↓</div><div class="stat__label">Release time</div></div>
+          <div class="stat"><div class="stat__value">30%↓</div><div class="stat__label">Dev time</div></div>
+          <div class="stat"><div class="stat__value">25%↑</div><div class="stat__label">UI responsiveness</div></div>
+          <div class="stat"><div class="stat__value">100GB</div><div class="stat__label">Data handled</div></div>
+        </div>
+      </div>
+      <aside class="hero__card">
+        <div class="card">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="card__meta">
+            <h3 class="card__title">San Francisco Bay Area</h3>
+            <p class="muted">Actively seeking SDE / Full-Stack / Cloud roles</p>
+          </div>
+          <ul class="list">
+            <li><strong>Email:</strong> <a href="mailto:nehadabeeru04@gmail.com">nehadabeeru04@gmail.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+12403860822">+1 (240) 386-0822</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container reveal">
+      <h2 class="section__title">About</h2>
+      <p class="body">
+        I’m a passionate software engineer who ships scalable, cloud-first software. My work spans
+        full-stack development (Angular/React, Node/Java Spring), serverless data engineering on AWS
+        (Lambda, Step Functions, AppSync/GraphQL, DynamoDB, RDS, S3, EventBridge), and performance-minded UX.
+        I love converting ambiguous requirements into clean architecture, measurable outcomes, and
+        accessible experiences.
+      </p>
+    </div>
   </section>
 
-  <section class="experience container fade-in">
-    <h2>Experience</h2>
+  <!-- Experience -->
+  <section id="experience" class="section section--alt">
+    <div class="container reveal">
+      <h2 class="section__title">Experience</h2>
 
-    <div class="job card">
-      <h3>Application Developer – CS Optima Inc</h3>
-      <span class="duration">Jan 2025 – Present | Remote, Austin TX</span>
-      <ul>
-        <li>Architected an <strong>eCRF data ingestion flow</strong> using AWS Lambda, Step Functions, and S3 event triggers.</li>
-        <li>Implemented <strong>CSV schema inference</strong>, domain matching, and automated mapping approvals.</li>
-        <li>Integrated robust scheduling via EventBridge for on-demand and frequency-based ingestion.</li>
-        <li>Optimized DynamoDB queries for large-scale mapping rule management and version control.</li>
-        <li>Collaborated with cross-functional teams to ensure compliance, scalability, and performance.</li>
-      </ul>
-    </div>
+      <ol class="timeline">
+        <!-- CS Optima -->
+        <li class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <header class="timeline__head">
+              <h3>Application Developer · CS Optima Inc</h3>
+              <span class="muted">Jan 2025 – Present · Remote (Austin, TX)</span>
+            </header>
+            <ul class="bullets">
+              <li><strong>eCRF workflow automation:</strong> designed an AWS-native ingestion pipeline with S3 events → Lambda → Step Functions → DynamoDB/AppSync, enabling auditable, metadata-driven processing.</li>
+              <li><strong>CSV ingestion & mapping:</strong> built domain inference, schema versioning, and automated mapping approvals; introduced SQS fan-out and idempotent processing.</li>
+              <li><strong>Orchestration:</strong> EventBridge scheduling for on-demand & recurring loads; parallelized Lambdas & batch writes improved throughput ~40%.</li>
+              <li><strong>IaC:</strong> modular Terraform for IAM, Lambda, API (AppSync), Step Functions, DynamoDB, RDS; environment-scoped modules and policies.</li>
+            </ul>
+            <div class="tags">AWS · Lambda · Step Functions · S3 · AppSync/GraphQL · DynamoDB · RDS · EventBridge · SQS · Terraform</div>
+          </div>
+        </li>
 
-    <div class="job card">
-      <h3>Software Engineer II – Bank of America</h3>
-      <span class="duration">Jun 2024 – Aug 2024 | Charlotte, NC</span>
-      <ul>
-        <li>Developed UI features in Angular for enterprise banking applications.</li>
-        <li>Integrated RESTful APIs and optimized front-end performance.</li>
-      </ul>
+        <!-- BoA SE II -->
+        <li class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <header class="timeline__head">
+              <h3>Software Engineer II · Bank of America (Contract)</h3>
+              <span class="muted">Jun 2024 – Aug 2024 · Charlotte, NC · Hybrid</span>
+            </header>
+            <ul class="bullets">
+              <li>Built high-performance Angular modules and Material components for enterprise platforms.</li>
+              <li>Upgraded Angular 10→16; reduced load time by ~30% and improved responsiveness ~25%.</li>
+              <li>CI/CD with Jenkins & Docker cut release times by ~40% across 10+ projects.</li>
+            </ul>
+            <div class="tags">Angular · Angular Material · TypeScript · ADA · Jenkins · Docker</div>
+          </div>
+        </li>
+
+        <!-- BoA SE I-B -->
+        <li class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <header class="timeline__head">
+              <h3>Software Engineer I-B · Bank of America</h3>
+              <span class="muted">Dec 2020 – Jan 2023 · India · Hybrid</span>
+            </header>
+            <ul class="bullets">
+              <li>Shipped responsive Angular apps for 1,000+ users; engagement ↑ via UX improvements.</li>
+              <li>Perf wins with caching, lazy-loading, code splitting; load time ↓ ~40%.</li>
+              <li>Spring Boot + MongoDB indexing/sharding → API throughput ↑ and scale ↑.</li>
+              <li>Implemented ADA/JAWS compliance to broaden accessibility.</li>
+            </ul>
+            <div class="tags">Angular · Java/Spring Boot · MongoDB · Accessibility</div>
+          </div>
+        </li>
+
+        <!-- Early roles -->
+        <li class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <header class="timeline__head">
+              <h3>Earlier Experience</h3>
+              <span class="muted">2017 – 2020</span>
+            </header>
+            <ul class="bullets">
+              <li>Apprentice · Bank of America (Jul 2020 – Dec 2020) — Angular, CSS/Bootstrap, HTML, team delivery.</li>
+              <li>Software Intern · FLSmidth (Dec 2018 – Jan 2019) — RPA (Automation Anywhere), APIs, relational DBs.</li>
+              <li>Software Developer Intern · RINL (Jul 2017 – Sep 2017) — REST APIs, Java/Spring Boot, PostgreSQL.</li>
+            </ul>
+            <div class="tags">Angular · RPA · Java/Spring · SQL · APIs</div>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <section class="certifications container fade-in">
-    <h2>Certifications</h2>
-    <div class="cert-card card">
-      <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Data-Engineer-Associate_badge_300x300.4d7d927b3b4c46fdf5eec6bcd63a72c551c154d5.png" alt="AWS Certified Data Engineer" />
-      <div>
-        <h4>AWS Certified Data Engineer – Associate</h4>
-        <p>Amazon Web Services | Issued May 2025 | Expires May 2028</p>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container reveal">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="grid">
+        <!-- MedPredict -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>MedPredict — Hospital Readmission Prediction</h3>
+            <p>LLM-assisted, RAG-informed analytics on MIMIC-III (100GB) with secure, HIPAA-minded workflows.</p>
+            <ul class="bullets small">
+              <li>92% accuracy; readmissions ↓ 45%.</li>
+              <li>Python/FastAPI + Docker; S3 storage; Firebase auth.</li>
+              <li>GPT-4 summaries improved clinical decision speed ↑ 80%.</li>
+            </ul>
+            <div class="tags">Angular · FastAPI · Docker · AWS S3 · LLM · Firebase</div>
+            <div class="row">
+              <a class="link" href="https://github.com/nehadabeeru/MedPredict" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ChurnXpert -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>ChurnXpert — Telecom Retention</h3>
+            <p>Predictive modeling for churn using Telco dataset; feature engineering, RFE, clustering, and XGBoost.</p>
+            <ul class="bullets small">
+              <li>Accuracy/Precision/Recall & AUC; mitigated class imbalance.</li>
+              <li>K-Means, association rules, anomaly detection for insights.</li>
+            </ul>
+            <div class="tags">Python · XGBoost · Random Forest · Logistic Regression</div>
+          </div>
+        </article>
+
+        <!-- Tourbot -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>TOURBOT — AI Chatbot for Tourist Recommendations</h3>
+            <p>Deep-learning + NLP recommendation engine with LSTM vs LLM approaches; PCA & rich evaluation.</p>
+            <ul class="bullets small">
+              <li>Metrics: Precision, Recall, F1, MRR, cosine similarity.</li>
+              <li>Fine-tuned GPT-2 (BLEU 0.8); real-time chat UX.</li>
+            </ul>
+            <div class="tags">Python · NLP/LLM · LSTM · Evaluation</div>
+          </div>
+        </article>
+
+        <!-- BayWheelz -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>BayWheelz — Bay Area Bike Prediction</h3>
+            <p>Model comparison for demand forecasting; Flask app with multiple regressors and data features.</p>
+            <div class="tags">Flask · XGBoost · KNN · Random Forest · SQL</div>
+          </div>
+        </article>
+
+        <!-- Financial Complaints -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>Financial Service Complaints — ML</h3>
+            <p>Analyzed CFPB complaints with BERT, LSTM, XGBoost, ElasticNet; deployed models for insights.</p>
+            <div class="tags">BERT · LSTM · Python · ML Ops (light)</div>
+          </div>
+        </article>
+
+        <!-- SFJobSync+ -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>SFJobSync+ — SF County Job Explorer</h3>
+            <p>End-to-end pipeline with AWS Redshift/S3/EC2, Kafka streaming, PySpark transforms, and dashboards.</p>
+            <ul class="bullets small">
+              <li>LogReg model 94% accuracy; Tableau for analytics.</li>
+            </ul>
+            <div class="tags">AWS · Kafka · PySpark · Redshift · ML · React</div>
+          </div>
+        </article>
+
+        <!-- Gun Violence Analysis -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>US Gun Violence — Performance Analysis</h3>
+            <p>Multi-store analytics across Snowflake, RDBMS, MongoDB, Redis; visualized findings in Tableau.</p>
+            <div class="tags">Snowflake · SQL · MongoDB · Redis · Tableau</div>
+          </div>
+        </article>
+
+        <!-- Stock Prediction -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>Stock Market Prediction Model</h3>
+            <p>Trend-aware predictions using Linear Regression, Decision Trees, and Neural Nets on historical data.</p>
+            <div class="tags">Python · ML · Time Series (baseline)</div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Relevant Projects (short list) -->
+      <details class="more">
+        <summary>Relevant Projects (more)</summary>
+        <div class="grid grid--two">
+          <div class="card">
+            <div class="card__body">
+              <h4>Campus Connect — Real-time Chat</h4>
+              <ul class="bullets small">
+                <li>React/WebSocket rooms, reactions, notifications → engagement ↑.</li>
+                <li>WebRTC voice; GraphQL APIs; JMeter tests for 10K+ chats.</li>
+              </ul>
+              <div class="tags">React · WebSocket · GraphQL · JMeter</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__body">
+              <h4>MedPredict RAG Chatbot</h4>
+              <ul class="bullets small">
+                <li>Dockerized Angular + FastAPI + OpenAI; 100K+ daily interactions (cached).</li>
+                <li>HIPAA-minded S3 + Firebase auth; API latency ↓ ~50%.</li>
+              </ul>
+              <div class="tags">Angular · FastAPI · OpenAI · S3 · Firebase</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__body">
+              <h4>Quarantine Management System</h4>
+              <ul class="bullets small">
+                <li>Health tracking, logistics, mental health chatbot; 100+ users.</li>
+                <li>SSR (Next.js) + Service Workers; load time ↓ ~40%.</li>
+              </ul>
+              <div class="tags">Next.js · Node · SQL · PWA</div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section--alt">
+    <div class="container reveal">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills">
+        <div class="skill__group">
+          <h3>Cloud & Data</h3>
+          <div class="badges">
+            <span>AWS</span><span>Lambda</span><span>Step Functions</span><span>AppSync/GraphQL</span><span>DynamoDB</span><span>RDS</span><span>S3</span><span>EventBridge</span><span>Glue</span><span>Redshift</span>
+          </div>
+        </div>
+        <div class="skill__group">
+          <h3>Full-Stack</h3>
+          <div class="badges">
+            <span>Angular</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Node.js</span><span>Java/Spring Boot</span><span>Python</span><span>REST</span><span>GraphQL</span>
+          </div>
+        </div>
+        <div class="skill__group">
+          <h3>Data & ML</h3>
+          <div class="badges">
+            <span>SQL</span><span>ETL</span><span>Feature Engineering</span><span>RAG/LLM</span><span>TensorFlow (baseline)</span>
+          </div>
+        </div>
+        <div class="skill__group">
+          <h3>DevOps & Tools</h3>
+          <div class="badges">
+            <span>Terraform</span><span>Docker</span><span>Jenkins</span><span>Git</span><span>JMeter</span><span>Tableau</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="projects container fade-in">
-    <h2>Key Projects</h2>
-    <div class="project card">
-      <h4>MedPredict – Hospital Readmission Prediction</h4>
-      <p>92% accurate LLM-driven healthcare analytics system using AWS S3, FastAPI, Docker, and HIPAA-compliant security.</p>
-    </div>
-    <div class="project card">
-      <h4>ChurnXpert – Telecom Retention Analytics</h4>
-      <p>Machine learning pipeline for churn prediction using clustering, anomaly detection, and predictive modeling.</p>
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="container reveal">
+      <h2 class="section__title">Education</h2>
+      <div class="grid grid--two">
+        <div class="card">
+          <div class="card__body">
+            <h3>M.S. in Data Science — San José State University</h3>
+            <p class="muted">Jan 2023 – Dec 2024 · First Class with Distinction</p>
+            <p class="small">Statistical Data Analysis, Deep Learning, Data Mining, Big Data, Data Visualization, Databases, NLP.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3>B.Tech in Computer Science — SRM IST Chennai</h3>
+            <p class="muted">2016 – 2020 · First Class with Distinction</p>
+            <p class="small">DSA, OOP, Operating Systems, AI, SQL.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="fade-in">
-    <p>© 2025 Neha Dabeeru | <a href="mailto:neha@example.com">Contact</a> | <a href="https://www.linkedin.com/in/nehadabeeru/">LinkedIn</a> | <a href="https://github.com/nehadabeeru">GitHub</a></p>
+  <!-- Certifications -->
+  <section id="certs" class="section section--alt">
+    <div class="container reveal">
+      <h2 class="section__title">Certifications</h2>
+      <div class="card card--cert">
+        <img class="cert__img" src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Data-Engineer-Associate_badge_300x300.4d7d927b3b4c46fdf5eec6bcd63a72c551c154d5.png" alt="AWS Certified Data Engineer – Associate badge" />
+        <div class="card__body">
+          <h3>AWS Certified Data Engineer – Associate</h3>
+          <p class="muted">Issued May 2025 · Expires May 2028</p>
+          <p class="small">Data lakes/warehouses, ETL pipelines (Glue/Athena/Redshift), governance, and serverless orchestration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container reveal">
+      <h2 class="section__title">Contact</h2>
+      <div class="contact">
+        <a class="btn" href="mailto:nehadabeeru04@gmail.com">Email</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Neha Dabeeru</span>
+      <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
