@@ -12,12 +12,11 @@ if (toggle) {
   });
 }
 
-// Smooth active link on scroll + smooth scroll
+// Active link on scroll
 const links = document.querySelectorAll('.nav__links a');
 const sections = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-
 function setActive() {
-  const fromTop = window.scrollY + 100;
+  const fromTop = window.scrollY + 110;
   let currentId = '';
   for (const sec of sections) {
     if (sec.offsetTop <= fromTop) currentId = '#' + sec.id;
@@ -27,6 +26,7 @@ function setActive() {
 setActive();
 window.addEventListener('scroll', setActive);
 
+// Smooth scroll
 links.forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ links.forEach(a => {
   });
 });
 
-// Reveal on scroll (IntersectionObserver)
+// Reveal on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
