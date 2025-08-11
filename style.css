@@ -1,87 +1,102 @@
-:root{
-  --brand:#0B3D91;            /* executive navy */
-  --ink:#111827;              /* near-black text */
-  --muted:#6B7280;            /* secondary text */
-  --line:#E5E7EB;             /* subtle borders */
-  --bg:#F9FAFB;               /* page background */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #1f2937;
 }
 
-/* Base */
-body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans";
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.7;
-  padding-top: 84px; /* nav offset */
-}
-h1,h2,h3,h4{
-  font-family: "Source Serif 4", ui-serif, Georgia, "Times New Roman", serif;
-  letter-spacing: -0.01em;
-}
-.tracking-tight{ letter-spacing: -0.02em; }
-
-/* Sections */
-.section-hero{ padding: 72px 0 56px; background: #fff; }
-.section{ padding: 72px 0; background: #fff; }
-.section + .section{ border-top: 1px solid var(--line); }
-.border-top{ border-color: var(--line)!important; }
-.border-bottom{ border-color: var(--line)!important; }
-
-/* Hero */
-.hero-title{ font-weight: 700; }
-.hero-card{ background: #fff; border: 1px solid var(--line); }
-.badge.bg-soft-success{
-  background: rgba(25,135,84,.12);
-  border: 1px solid rgba(25,135,84,.3);
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Stats */
-.stat .stat-value{
-  font: 700 1.5rem/1 Inter, sans-serif;
-}
-.stat .stat-label{
-  color: var(--muted);
-  font-size: .9rem;
+header {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-/* Timeline */
-.timeline{ position: relative; margin-left: .75rem; }
-.timeline:before{
-  content:""; position:absolute; left: .5rem; top:.25rem; bottom:.25rem; width:2px; background: var(--line);
-}
-.timeline-item{ position: relative; margin-left: 1.75rem; margin-bottom: 1.5rem; }
-.timeline-dot{
-  position:absolute; left:-1.1rem; top:.8rem; width:10px; height:10px; border-radius:50%;
-  background: var(--brand); box-shadow: 0 0 0 3px #fff;
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-/* Cards */
-.card{ border:1px solid var(--line); transition: transform .18s ease, box-shadow .18s ease; }
-.card:hover{ transform: translateY(-2px); box-shadow: 0 1rem 2rem rgba(0,0,0,.06); }
-.rounded-4{ border-radius: 1rem; }
-
-/* Project cards */
-.project-card h5{ font-weight:600; }
-.project-card small{ color: var(--muted); }
-
-/* Badges for skills */
-.badges{ display:flex; flex-wrap:wrap; gap:.5rem; }
-.badges span{
-  font-size:.9rem; padding:.35rem .6rem; border:1px solid var(--line); background:#fff; border-radius:999px;
+.tagline {
+  font-weight: 300;
 }
 
-/* Buttons */
-.btn-primary{
-  background: var(--brand); border-color: var(--brand);
+section {
+  margin: 2rem 0;
 }
-.btn-primary:hover{ filter: brightness(0.92); }
-.btn-outline-primary{ color: var(--brand); border-color: var(--brand); }
-.btn-outline-primary:hover{ background: var(--brand); color:#fff; }
 
-/* Avatar placeholder */
-.avatar.placeholder{ width:64px; height:64px; background:#eef1f6; border:1px solid var(--line); }
+h2 {
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
 
-/* Nav */
-.navbar-brand{ letter-spacing: -.02em; }
-.nav-link{ font-weight: 500; }
-.nav-link.active{ color: var(--brand)!important; }
+.job h3 {
+  margin-bottom: 0.25rem;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+}
+
+.certifications img {
+  width: 80px;
+  margin-right: 1rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.project {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cert-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .certifications img {
+    margin-bottom: 0.5rem;
+  }
+}
