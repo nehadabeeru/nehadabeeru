@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neha Dabeeru · Software Engineer</title>
-  <meta name="description" content="Portfolio of Neha Dabeeru — Full-Stack & Cloud Engineer, AWS Certified Data Engineer – Associate." />
+  <meta name="description" content="Neha Dabeeru — Full-Stack & Cloud Engineer. AWS Certified Data Engineer – Associate. Portfolio, experience, and projects." />
   <link href="style.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <!-- Sticky Nav -->
-  <header class="nav">
+  <header class="nav" role="navigation" aria-label="Primary">
     <div class="container nav__inner">
       <a href="#top" class="brand" aria-label="Home">Neha Dabeeru</a>
-      <nav class="nav__links" aria-label="Primary">
+      <nav class="nav__links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -34,7 +34,7 @@
   <main id="top" class="hero">
     <div class="container hero__inner reveal">
       <div class="hero__copy">
-        <span class="pill">Open to SDE & Full-Stack roles</span>
+        <span class="pill">Open to SDE · Full-Stack · Cloud roles</span>
         <h1 class="hero__title">
           <span class="serif">Neha Dabeeru</span>
           <span class="role">
@@ -48,9 +48,9 @@
           </span>
         </h1>
         <p class="lead">
-          Full-Stack & Cloud Engineer • AWS Certified Data Engineer – Associate •
-          M.S. (Data Science) — San José State University. I design reliable, secure, and
-          measurable software — from Angular/React frontends to AWS-backed data workflows.
+          Full-Stack & Cloud Engineer · AWS Certified Data Engineer – Associate ·
+          M.S. (Data Science), San José State University. I design reliable, secure,
+          and measurable software—from Angular/React frontends to AWS-backed data workflows.
         </p>
         <div class="actions">
           <a class="btn" href="#projects">See Projects</a>
@@ -86,11 +86,10 @@
     <div class="container reveal">
       <h2 class="section__title">About</h2>
       <p class="body">
-        I’m a passionate software engineer who ships scalable, cloud-first software. My work spans
-        full-stack development (Angular/React, Node/Java Spring), serverless data engineering on AWS
+        I’m a results-driven software engineer who ships scalable, cloud-first software.
+        I work across full-stack development (Angular/React, Node/Java Spring), serverless data engineering on AWS
         (Lambda, Step Functions, AppSync/GraphQL, DynamoDB, RDS, S3, EventBridge), and performance-minded UX.
-        I love converting ambiguous requirements into clean architecture, measurable outcomes, and
-        accessible experiences.
+        I turn ambiguous problems into clean architecture, accessible experiences, and measurable business outcomes.
       </p>
     </div>
   </section>
@@ -101,7 +100,7 @@
       <h2 class="section__title">Experience</h2>
 
       <ol class="timeline">
-        <!-- CS Optima -->
+        <!-- CS Optima: services/capabilities style -->
         <li class="timeline__item">
           <div class="timeline__dot"></div>
           <div class="timeline__card">
@@ -109,13 +108,15 @@
               <h3>Application Developer · CS Optima Inc</h3>
               <span class="muted">Jan 2025 – Present · Remote (Austin, TX)</span>
             </header>
+            <p class="muted small">Delivering enterprise-grade solutions with AWS & modern full-stack.</p>
             <ul class="bullets">
-              <li><strong>eCRF workflow automation:</strong> designed an AWS-native ingestion pipeline with S3 events → Lambda → Step Functions → DynamoDB/AppSync, enabling auditable, metadata-driven processing.</li>
-              <li><strong>CSV ingestion & mapping:</strong> built domain inference, schema versioning, and automated mapping approvals; introduced SQS fan-out and idempotent processing.</li>
-              <li><strong>Orchestration:</strong> EventBridge scheduling for on-demand & recurring loads; parallelized Lambdas & batch writes improved throughput ~40%.</li>
-              <li><strong>IaC:</strong> modular Terraform for IAM, Lambda, API (AppSync), Step Functions, DynamoDB, RDS; environment-scoped modules and policies.</li>
+              <li><strong>Cloud Services:</strong> AWS Lambda, DynamoDB, RDS, S3, EventBridge, Step Functions, Secrets Manager</li>
+              <li><strong>Integration & APIs:</strong> AppSync (GraphQL), REST, API Gateway, event-driven microservices</li>
+              <li><strong>Data Solutions:</strong> Real-time ingestion, schema/version management, rules-driven mapping</li>
+              <li><strong>Security & IAM:</strong> least-privilege roles, service-to-service auth, auditability</li>
+              <li><strong>Automation & IaC:</strong> Terraform modules, GitHub Actions CI/CD, multi-env deployment</li>
             </ul>
-            <div class="tags">AWS · Lambda · Step Functions · S3 · AppSync/GraphQL · DynamoDB · RDS · EventBridge · SQS · Terraform</div>
+            <div class="tags">AWS · Serverless · AppSync/GraphQL · API Gateway · IaC (Terraform) · CI/CD</div>
           </div>
         </li>
 
@@ -128,11 +129,11 @@
               <span class="muted">Jun 2024 – Aug 2024 · Charlotte, NC · Hybrid</span>
             </header>
             <ul class="bullets">
-              <li>Built high-performance Angular modules and Material components for enterprise platforms.</li>
-              <li>Upgraded Angular 10→16; reduced load time by ~30% and improved responsiveness ~25%.</li>
-              <li>CI/CD with Jenkins & Docker cut release times by ~40% across 10+ projects.</li>
+              <li>Angular modules & Material components for enterprise platforms.</li>
+              <li>Upgraded Angular 10→16 → load time ↓ ~30%, responsiveness ↑ ~25%.</li>
+              <li>CI/CD with Jenkins & Docker → release times ↓ ~40% across 10+ projects.</li>
             </ul>
-            <div class="tags">Angular · Angular Material · TypeScript · ADA · Jenkins · Docker</div>
+            <div class="tags">Angular · TypeScript · Angular Material · Jenkins · Docker · ADA</div>
           </div>
         </li>
 
@@ -145,10 +146,10 @@
               <span class="muted">Dec 2020 – Jan 2023 · India · Hybrid</span>
             </header>
             <ul class="bullets">
-              <li>Shipped responsive Angular apps for 1,000+ users; engagement ↑ via UX improvements.</li>
-              <li>Perf wins with caching, lazy-loading, code splitting; load time ↓ ~40%.</li>
+              <li>Responsive Angular apps for 1,000+ users; UX improvements → engagement ↑.</li>
+              <li>Caching, lazy-loading, code splitting → load time ↓ ~40%.</li>
               <li>Spring Boot + MongoDB indexing/sharding → API throughput ↑ and scale ↑.</li>
-              <li>Implemented ADA/JAWS compliance to broaden accessibility.</li>
+              <li>Implemented ADA/JAWS compliance.</li>
             </ul>
             <div class="tags">Angular · Java/Spring Boot · MongoDB · Accessibility</div>
           </div>
@@ -163,7 +164,7 @@
               <span class="muted">2017 – 2020</span>
             </header>
             <ul class="bullets">
-              <li>Apprentice · Bank of America (Jul 2020 – Dec 2020) — Angular, CSS/Bootstrap, HTML, team delivery.</li>
+              <li>Apprentice · Bank of America (Jul 2020 – Dec 2020) — Angular, HTML/CSS/Bootstrap.</li>
               <li>Software Intern · FLSmidth (Dec 2018 – Jan 2019) — RPA (Automation Anywhere), APIs, relational DBs.</li>
               <li>Software Developer Intern · RINL (Jul 2017 – Sep 2017) — REST APIs, Java/Spring Boot, PostgreSQL.</li>
             </ul>
@@ -174,7 +175,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects (all in a single section/grid) -->
   <section id="projects" class="section">
     <div class="container reveal">
       <h2 class="section__title">Projects</h2>
@@ -188,7 +189,7 @@
             <ul class="bullets small">
               <li>92% accuracy; readmissions ↓ 45%.</li>
               <li>Python/FastAPI + Docker; S3 storage; Firebase auth.</li>
-              <li>GPT-4 summaries improved clinical decision speed ↑ 80%.</li>
+              <li>GPT-4 summaries improved decision speed ↑ 80%.</li>
             </ul>
             <div class="tags">Angular · FastAPI · Docker · AWS S3 · LLM · Firebase</div>
             <div class="row">
@@ -201,24 +202,16 @@
         <article class="card card--project">
           <div class="card__body">
             <h3>ChurnXpert — Telecom Retention</h3>
-            <p>Predictive modeling for churn using Telco dataset; feature engineering, RFE, clustering, and XGBoost.</p>
-            <ul class="bullets small">
-              <li>Accuracy/Precision/Recall & AUC; mitigated class imbalance.</li>
-              <li>K-Means, association rules, anomaly detection for insights.</li>
-            </ul>
+            <p>Predictive modeling for churn using Telco dataset; feature engineering, RFE, clustering, XGBoost.</p>
             <div class="tags">Python · XGBoost · Random Forest · Logistic Regression</div>
           </div>
         </article>
 
-        <!-- Tourbot -->
+        <!-- TOURBOT -->
         <article class="card card--project">
           <div class="card__body">
-            <h3>TOURBOT — AI Chatbot for Tourist Recommendations</h3>
-            <p>Deep-learning + NLP recommendation engine with LSTM vs LLM approaches; PCA & rich evaluation.</p>
-            <ul class="bullets small">
-              <li>Metrics: Precision, Recall, F1, MRR, cosine similarity.</li>
-              <li>Fine-tuned GPT-2 (BLEU 0.8); real-time chat UX.</li>
-            </ul>
+            <h3>TOURBOT — Travel Recommendation Chatbot</h3>
+            <p>NLP/Deep-learning engine; LSTM vs LLM approaches; PCA & robust evaluation (Precision/Recall/F1/MRR).</p>
             <div class="tags">Python · NLP/LLM · LSTM · Evaluation</div>
           </div>
         </article>
@@ -226,7 +219,7 @@
         <!-- BayWheelz -->
         <article class="card card--project">
           <div class="card__body">
-            <h3>BayWheelz — Bay Area Bike Prediction</h3>
+            <h3>BayWheelz — Bay Area Bike Demand</h3>
             <p>Model comparison for demand forecasting; Flask app with multiple regressors and data features.</p>
             <div class="tags">Flask · XGBoost · KNN · Random Forest · SQL</div>
           </div>
@@ -237,7 +230,7 @@
           <div class="card__body">
             <h3>Financial Service Complaints — ML</h3>
             <p>Analyzed CFPB complaints with BERT, LSTM, XGBoost, ElasticNet; deployed models for insights.</p>
-            <div class="tags">BERT · LSTM · Python · ML Ops (light)</div>
+            <div class="tags">BERT · LSTM · Python · ML</div>
           </div>
         </article>
 
@@ -245,15 +238,13 @@
         <article class="card card--project">
           <div class="card__body">
             <h3>SFJobSync+ — SF County Job Explorer</h3>
-            <p>End-to-end pipeline with AWS Redshift/S3/EC2, Kafka streaming, PySpark transforms, and dashboards.</p>
-            <ul class="bullets small">
-              <li>LogReg model 94% accuracy; Tableau for analytics.</li>
-            </ul>
+            <p>AWS Redshift/S3/EC2 pipeline, Kafka streaming, PySpark transforms, React UI, and Tableau analytics.</p>
+            <ul class="bullets small"><li>Logistic Regression model: 94% accuracy.</li></ul>
             <div class="tags">AWS · Kafka · PySpark · Redshift · ML · React</div>
           </div>
         </article>
 
-        <!-- Gun Violence Analysis -->
+        <!-- Gun Violence -->
         <article class="card card--project">
           <div class="card__body">
             <h3>US Gun Violence — Performance Analysis</h3>
@@ -267,47 +258,37 @@
           <div class="card__body">
             <h3>Stock Market Prediction Model</h3>
             <p>Trend-aware predictions using Linear Regression, Decision Trees, and Neural Nets on historical data.</p>
-            <div class="tags">Python · ML · Time Series (baseline)</div>
+            <div class="tags">Python · ML · Time Series</div>
+          </div>
+        </article>
+
+        <!-- Campus Connect -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>Campus Connect — Real-time Chat</h3>
+            <p>React/WebSocket rooms, reactions, notifications; GraphQL APIs; JMeter load tests for 10K+ chats.</p>
+            <div class="tags">React · WebSocket · GraphQL · JMeter</div>
+          </div>
+        </article>
+
+        <!-- MedPredict RAG Chatbot -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>MedPredict — RAG Chatbot</h3>
+            <p>Dockerized Angular + FastAPI + OpenAI; cached 100K+ daily interactions; HIPAA-minded S3 + Firebase.</p>
+            <div class="tags">Angular · FastAPI · OpenAI · S3 · Firebase</div>
+          </div>
+        </article>
+
+        <!-- Quarantine Management -->
+        <article class="card card--project">
+          <div class="card__body">
+            <h3>Quarantine Management System</h3>
+            <p>Health tracking, logistics, mental-health chatbot; SSR (Next.js) + Service Workers; load time ↓ ~40%.</p>
+            <div class="tags">Next.js · Node · SQL · PWA</div>
           </div>
         </article>
       </div>
-
-      <!-- Relevant Projects (short list) -->
-      <details class="more">
-        <summary>Relevant Projects (more)</summary>
-        <div class="grid grid--two">
-          <div class="card">
-            <div class="card__body">
-              <h4>Campus Connect — Real-time Chat</h4>
-              <ul class="bullets small">
-                <li>React/WebSocket rooms, reactions, notifications → engagement ↑.</li>
-                <li>WebRTC voice; GraphQL APIs; JMeter tests for 10K+ chats.</li>
-              </ul>
-              <div class="tags">React · WebSocket · GraphQL · JMeter</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__body">
-              <h4>MedPredict RAG Chatbot</h4>
-              <ul class="bullets small">
-                <li>Dockerized Angular + FastAPI + OpenAI; 100K+ daily interactions (cached).</li>
-                <li>HIPAA-minded S3 + Firebase auth; API latency ↓ ~50%.</li>
-              </ul>
-              <div class="tags">Angular · FastAPI · OpenAI · S3 · Firebase</div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__body">
-              <h4>Quarantine Management System</h4>
-              <ul class="bullets small">
-                <li>Health tracking, logistics, mental health chatbot; 100+ users.</li>
-                <li>SSR (Next.js) + Service Workers; load time ↓ ~40%.</li>
-              </ul>
-              <div class="tags">Next.js · Node · SQL · PWA</div>
-            </div>
-          </div>
-        </div>
-      </details>
     </div>
   </section>
 
@@ -376,7 +357,7 @@
         <div class="card__body">
           <h3>AWS Certified Data Engineer – Associate</h3>
           <p class="muted">Issued May 2025 · Expires May 2028</p>
-          <p class="small">Data lakes/warehouses, ETL pipelines (Glue/Athena/Redshift), governance, and serverless orchestration.</p>
+          <p class="small">Data lakes/warehouses, ETL (Glue/Athena/Redshift), governance, serverless orchestration, cost & performance tuning.</p>
         </div>
       </div>
     </div>
