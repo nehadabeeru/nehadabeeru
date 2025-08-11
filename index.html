@@ -1,401 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neha Dabeeru · Portfolio</title>
-  <meta name="description" content="Portfolio of Neha Dabeeru — Software Engineer & Data-focused Developer." />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neha Dabeeru - Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
 </head>
-
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="96" tabindex="0">
-  <!-- NAV -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+<body>
+  <header>
     <div class="container">
-      <a class="navbar-brand fw-semibold tracking-tight" href="#top">Neha Dabeeru</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
-        aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse justify-content-end">
-        <ul class="navbar-nav align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <a class="btn btn-primary ms-lg-3 rounded-pill px-3" href="nehadabeeru.pdf" target="_blank" rel="noopener">
-          <i class="bi bi-file-earmark-text me-1"></i> Resume
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header id="top" class="section-hero border-bottom">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-12 col-lg-7">
-          <span class="badge bg-soft-success text-success-emphasis rounded-pill mb-3">Open to opportunities</span>
-          <h1 class="display-5 lh-tight hero-title">Software Engineer with a Product Mindset</h1>
-          <p class="lead text-secondary mb-4">
-            I design and ship reliable web & data systems across Angular/React, Java/Spring, Python, and AWS.
-            My work focuses on clarity, performance, and measurable outcomes.
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-primary rounded-pill" href="#projects"><i class="bi bi-rocket me-1"></i> View Projects</a>
-            <a class="btn btn-outline-secondary rounded-pill" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">
-              <i class="bi bi-linkedin me-1"></i> LinkedIn
-            </a>
-            <a class="btn btn-outline-secondary rounded-pill" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">
-              <i class="bi bi-github me-1"></i> GitHub
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-lg-5">
-          <div class="hero-card shadow-sm rounded-4 p-4">
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="avatar placeholder rounded-3"></div>
-              <div>
-                <h6 class="mb-0">Neha Dabeeru</h6>
-                <small class="text-secondary">Charlotte, NC, USA</small>
-              </div>
-            </div>
-            <ul class="list-unstyled small mb-0">
-              <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope text-secondary"></i>
-                <a href="mailto:nehadabeeru04@gmail.com">nehadabeeru04@gmail.com</a></li>
-              <li class="d-flex align-items-center gap-2"><i class="bi bi-telephone text-secondary"></i>
-                <a href="tel:+12403860822">+1 (240) 386-0822</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats strip -->
-      <div class="row text-center g-4 mt-5">
-        <div class="col-6 col-md-3">
-          <div class="stat">
-            <div class="stat-value">30%+</div>
-            <div class="stat-label">Dev time reduced</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat">
-            <div class="stat-value">40%↓</div>
-            <div class="stat-label">Release time</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat">
-            <div class="stat-value">25%↑</div>
-            <div class="stat-label">UI responsiveness</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="stat">
-            <div class="stat-value">100GB</div>
-            <div class="stat-label">Data handled</div>
-          </div>
-        </div>
-      </div>
+      <h1>Neha Dabeeru</h1>
+      <p class="tagline">Actively Seeking SDE Roles | Full-Stack Developer | AWS Certified | San Jose State University</p>
     </div>
   </header>
 
-  <main>
-    <!-- EXPERIENCE (timeline cards) -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Experience</h2>
-          <p class="text-secondary">Selective highlights with outcomes.</p>
-        </div>
+  <section class="about container">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate software engineer with expertise in full-stack development, cloud computing, and data-driven applications. 
+      Currently at <strong>CS Optima Inc</strong>, I design and implement intelligent eCRF workflows and CSV ingestion pipelines 
+      using AWS services (Lambda, Step Functions, DynamoDB, S3, RDS). My work focuses on building scalable, event-driven systems 
+      with automated schema detection, domain inference, and seamless integration into clinical data platforms.
+    </p>
+  </section>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="card shadow-sm rounded-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between flex-wrap gap-2 mb-2">
-                  <h5 class="mb-0">Software Developer II Intern · Bank of America</h5>
-                  <small class="text-secondary">Charlotte, NC · Jun–Aug 2024</small>
-                </div>
-                <ul class="mb-0">
-                  <li>Built modular Angular component library → development time ↓ <strong>30%</strong>.</li>
-                  <li>Upgraded Angular 10→16 → load time ↓ <strong>30%</strong>, responsiveness ↑ <strong>25%</strong>.</li>
-                  <li>CI/CD via Jenkins & Docker → release times ↓ <strong>40%</strong> across 10+ projects.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <section class="experience container">
+    <h2>Experience</h2>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="card shadow-sm rounded-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between flex-wrap gap-2 mb-2">
-                  <h5 class="mb-0">Software Engineer I · Bank of America</h5>
-                  <small class="text-secondary">Chennai, IN · Jun 2020–Dec 2022</small>
-                </div>
-                <ul class="mb-0">
-                  <li>Responsive Angular apps → engagement ↑ <strong>20%</strong> for 1,000+ users.</li>
-                  <li>Caching, lazy-loading, code splitting → load time ↓ <strong>40%</strong>.</li>
-                  <li>Spring Boot + MongoDB indexing/sharding → API throughput ↑.</li>
-                  <li>Shipped ADA/JAWS compliance to expand accessibility.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <div class="job">
+      <h3>Application Developer – CS Optima Inc</h3>
+      <span class="duration">Jan 2025 – Present | Remote, Austin TX</span>
+      <ul>
+        <li>Architected an <strong>eCRF data ingestion flow</strong> using AWS Lambda, Step Functions, and S3 event triggers.</li>
+        <li>Implemented <strong>CSV schema inference</strong>, domain matching, and automated mapping approvals.</li>
+        <li>Integrated robust scheduling via EventBridge for on-demand and frequency-based ingestion.</li>
+        <li>Optimized DynamoDB queries for large-scale mapping rule management and version control.</li>
+        <li>Collaborated with cross-functional teams to ensure compliance, scalability, and performance.</li>
+      </ul>
+    </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="card shadow-sm rounded-4">
-              <div class="card-body">
-                <div class="d-flex justify-content-between flex-wrap gap-2 mb-2">
-                  <h5 class="mb-0">Software Engineer Intern · RINL</h5>
-                  <small class="text-secondary">Visakhapatnam, IN · May–Aug 2018</small>
-                </div>
-                <ul class="mb-0">
-                  <li>Refactored Django → Java/Spring Boot → supply-chain costs ↓ <strong>10%</strong>.</li>
-                  <li>REST APIs improved operational efficiency by <strong>25%</strong>.</li>
-                  <li>Collaborated cross-functionally to land on-time deliverables.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /timeline -->
+    <div class="job">
+      <h3>Software Engineer II – Bank of America</h3>
+      <span class="duration">Jun 2024 – Aug 2024 | Charlotte, NC</span>
+      <ul>
+        <li>Developed UI features in Angular for enterprise banking applications.</li>
+        <li>Integrated RESTful APIs and optimized front-end performance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="certifications container">
+    <h2>Certifications</h2>
+    <div class="cert-card">
+      <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Data-Engineer-Associate_badge_300x300.4d7d927b3b4c46fdf5eec6bcd63a72c551c154d5.png" alt="AWS Certified Data Engineer" />
+      <div>
+        <h4>AWS Certified Data Engineer – Associate</h4>
+        <p>Amazon Web Services | Issued May 2025 | Expires May 2028</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section border-top">
-      <div class="container">
-        <div class="section-head">
-          <h2>Projects</h2>
-          <p class="text-secondary">Concise case studies.</p>
-        </div>
+  <section class="projects container">
+    <h2>Key Projects</h2>
+    <div class="project">
+      <h4>MedPredict – Hospital Readmission Prediction</h4>
+      <p>92% accurate LLM-driven healthcare analytics system using AWS S3, FastAPI, Docker, and HIPAA-compliant security.</p>
+    </div>
+    <div class="project">
+      <h4>ChurnXpert – Telecom Retention Analytics</h4>
+      <p>Machine learning pipeline for churn prediction using clustering, anomaly detection, and predictive modeling.</p>
+    </div>
+  </section>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-xl-4">
-            <div class="card project-card shadow-sm rounded-4 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="mb-1">MedPredict — Readmission Prediction</h5>
-                <small class="text-secondary">Angular · FastAPI · Docker · AWS S3 · LLM</small>
-                <ul class="small flex-grow-1 mt-3 mb-4">
-                  <li>Dialogue model; 90% accuracy; readmissions ↓ 45%.</li>
-                  <li>100GB MIMIC III on S3; auth via Firebase (HIPAA-minded).</li>
-                  <li>RAG prototype w/ GPT-4; clinical decisions ↑ 80%.</li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-outline-primary btn-sm rounded-pill" href="#" target="_blank">Case study</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-xl-4">
-            <div class="card project-card shadow-sm rounded-4 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="mb-1">Tourbot — AI Travel Assistant</h5>
-                <small class="text-secondary">Angular · Flask · TensorFlow · PostgreSQL</small>
-                <ul class="small flex-grow-1 mt-3 mb-4">
-                  <li>Real-time LLM chat; engagement ↑ 30%.</li>
-                  <li>10GB Yelp analytics + dashboards.</li>
-                  <li>Fine-tuned GPT-2 (BLEU 0.8).</li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-outline-primary btn-sm rounded-pill" href="#" target="_blank">Case study</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-xl-4">
-            <div class="card project-card shadow-sm rounded-4 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="mb-1">SFJobSync+ — SF Jobs Explorer</h5>
-                <small class="text-secondary">AWS · Kafka · PySpark · Redshift · ML</small>
-                <ul class="small flex-grow-1 mt-3 mb-4">
-                  <li>Pipeline across S3/EC2/Kafka/PySpark/Redshift.</li>
-                  <li>Logistic regression at 94% accuracy.</li>
-                  <li>Tableau dashboards → candidate ID ↑ 15%.</li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-outline-primary btn-sm rounded-pill" href="#" target="_blank">Case study</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-xl-4">
-            <div class="card project-card shadow-sm rounded-4 h-100">
-              <div class="card-body d-flex flex-column">
-                <h5 class="mb-1">Spartan Store — Marketplace</h5>
-                <small class="text-secondary">Angular · MySQL · PHP · AWS · Heroku</small>
-                <ul class="small flex-grow-1 mt-3 mb-4">
-                  <li>REST architecture; engagement ↑ 25%.</li>
-                  <li>Advanced search; relevance ↑ 20%.</li>
-                  <li>Secure deploy (TLS), high uptime.</li>
-                </ul>
-                <div class="mt-auto">
-                  <a class="btn btn-outline-primary btn-sm rounded-pill" href="#" target="_blank">Case study</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /row -->
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Skills</h2>
-          <p class="text-secondary">A balanced stack.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <h6 class="text-uppercase text-secondary mb-2">Frontend</h6>
-            <div class="badges">
-              <span>Angular</span><span>React</span><span>TypeScript</span><span>Redux</span><span>Tailwind</span><span>Vue</span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h6 class="text-uppercase text-secondary mb-2">Backend</h6>
-            <div class="badges">
-              <span>Java/Spring</span><span>Node.js</span><span>Python</span><span>Django</span><span>Flask</span><span>GraphQL</span>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h6 class="text-uppercase text-secondary mb-2">Cloud & Data</h6>
-            <div class="badges">
-              <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section border-top">
-      <div class="container">
-        <div class="section-head">
-          <h2>Education</h2>
-          <p class="text-secondary">Strong analytical foundation.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card shadow-sm rounded-4 h-100">
-              <div class="card-body">
-                <h5 class="mb-1">M.S. in Data Analytics</h5>
-                <small class="text-secondary">San Jose State University · Dec 2024</small>
-                <p class="small mb-0 mt-3">
-                  ML, Deep Learning, Data Mining, Big Data Tech, Data Viz, Databases, Statistics.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card shadow-sm rounded-4 h-100">
-              <div class="card-body">
-                <h5 class="mb-1">B.Tech in Computer Science</h5>
-                <small class="text-secondary">SRM University · Jul 2020</small>
-                <p class="small mb-0 mt-3">
-                  DSA, OOP, NLP, Operating Systems, AI.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p class="text-secondary">Let’s talk.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="card shadow-sm rounded-4 h-100">
-              <div class="card-body">
-                <!-- For production without backend, consider Formspree/EmailJS -->
-                <form id="contactForm" novalidate>
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" class="form-control" type="text" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" class="form-control" type="email" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" class="form-control" rows="5" required></textarea>
-                  </div>
-                  <button class="btn btn-primary rounded-pill" type="submit">Send</button>
-                  <p class="small text-secondary mt-2 mb-0">I usually reply within 1–2 days.</p>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="card shadow-sm rounded-4 h-100">
-              <div class="card-body">
-                <h6>Direct</h6>
-                <ul class="list-unstyled small mb-4 mt-2">
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope text-secondary"></i>
-                    <a href="mailto:nehadabeeru04@gmail.com">nehadabeeru04@gmail.com</a></li>
-                  <li class="d-flex align-items-center gap-2"><i class="bi bi-telephone text-secondary"></i>
-                    <a href="tel:+12403860822">+1 (240) 386-0822</a></li>
-                </ul>
-                <h6>Social</h6>
-                <div class="d-flex flex-wrap gap-2">
-                  <a class="btn btn-outline-secondary btn-sm rounded-pill" target="_blank" href="https://www.linkedin.com/in/nehadabeeru/"><i class="bi bi-linkedin me-1"></i> LinkedIn</a>
-                  <a class="btn btn-outline-secondary btn-sm rounded-pill" target="_blank" href="https://github.com/nehadabeeru"><i class="bi bi-github me-1"></i> GitHub</a>
-                  <a class="btn btn-outline-secondary btn-sm rounded-pill" target="_blank" href="nehadabeeru.pdf"><i class="bi bi-file-earmark-text me-1"></i> Resume</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div> <!-- /row -->
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-top py-4 text-center small text-secondary">
-    © <span id="year"></span> Neha Dabeeru
+  <footer>
+    <p>© 2025 Neha Dabeeru | <a href="mailto:neha@example.com">Contact</a> | <a href="https://www.linkedin.com/in/nehadabeeru/">LinkedIn</a> | <a href="https://github.com/nehadabeeru">GitHub</a></p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Contact form validation
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) return alert('Please fill out all required fields.');
-      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      if (!ok) return alert('Please enter a valid email address.');
-      alert('Thank you—your message has been recorded.'); this.reset();
-    });
-  </script>
 </body>
 </html>
-
