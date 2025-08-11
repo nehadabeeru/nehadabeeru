@@ -3,6 +3,7 @@ body {
   margin: 0;
   background: #f9fafb;
   color: #1f2937;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -59,17 +60,22 @@ ul {
 .cert-card {
   display: flex;
   align-items: center;
+}
+
+.card {
   background: white;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .project {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   margin-bottom: 1rem;
 }
 
@@ -88,6 +94,25 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in:nth-of-type(2) { animation-delay: 0.2s; }
+.fade-in:nth-of-type(3) { animation-delay: 0.4s; }
+.fade-in:nth-of-type(4) { animation-delay: 0.6s; }
+.fade-in:nth-of-type(5) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
