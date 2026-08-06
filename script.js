@@ -16,7 +16,7 @@ if (toggle) {
 const links = document.querySelectorAll('.nav__links a');
 const sections = [...links].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
 function setActive() {
-  const fromTop = window.scrollY + 110;
+  const fromTop = window.scrollY + 120;
   let currentId = '';
   for (const sec of sections) {
     if (sec.offsetTop <= fromTop) currentId = '#' + sec.id;
@@ -26,7 +26,7 @@ function setActive() {
 setActive();
 window.addEventListener('scroll', setActive);
 
-// Smooth scroll
+// Smooth scroll + close mobile menu
 links.forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
@@ -48,27 +48,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Typing/rotating headline
-const typing = document.querySelector('.role__typing');
-if (typing) {
-  const phrases = JSON.parse(typing.getAttribute('data-rotate') || '[]');
-  let i = 0, char = 0, erasing = false, hold = 0;
-
-  function tick() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      typing.textContent = phrases[0] || '';
-      return;
-    }
-    const current = phrases[i % phrases.length] || '';
-    if (!erasing) {
-      typing.textContent = current.slice(0, ++char);
-      if (char === current.length) { hold++; if (hold > 12) { erasing = true; hold = 0; } }
-    } else {
-      typing.textContent = current.slice(0, --char);
-      if (char === 0) { erasing = false; i++; }
-    }
-    setTimeout(tick, erasing ? 40 : 60);
-  }
-  tick();
-}
