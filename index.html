@@ -8,7 +8,7 @@
   <link href="style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -31,10 +31,15 @@
   </header>
 
   <main id="top" class="hero">
+    <div class="blob blob--one" aria-hidden="true"></div>
+    <div class="blob blob--two" aria-hidden="true"></div>
+    <div class="blob blob--three" aria-hidden="true"></div>
+
     <div class="container hero__inner reveal">
       <div class="hero__copy">
-        <p class="eyebrow">Software Engineer · Backend &amp; GenAI Platforms</p>
-        <h1 class="hero__title">Neha Dabeeru</h1>
+        <p class="script-tag">hi, i'm</p>
+        <h1 class="hero__title">Neha <span class="grad-text">Dabeeru</span></h1>
+        <p class="role-tag">Software Engineer · Backend &amp; GenAI Platforms</p>
         <p class="lead">
           4+ years designing and shipping backend systems at scale — serverless APIs,
           event-driven pipelines, and distributed workflows for high-traffic, production
@@ -49,18 +54,17 @@
       </div>
 
       <aside class="hero__status" aria-label="Availability status">
-        <div class="status-card">
-          <div class="status-card__row status-card__row--head">
+        <div class="badge-card">
+          <div class="badge-card__head">
             <span class="dot" aria-hidden="true"></span>
-            <span class="status-card__label">open_to_work</span>
-            <span class="status-card__value">true</span>
+            <span>open to opportunities</span>
           </div>
-          <dl class="status-card__list">
-            <div><dt>location</dt><dd>Raleigh, NC</dd></div>
-            <div><dt>experience</dt><dd>4+ yrs</dd></div>
-            <div><dt>certified</dt><dd>AWS · Data Engineer</dd></div>
-            <div><dt>contact</dt><dd><a href="mailto:nehadabeeru@outlook.com">nehadabeeru@outlook.com</a></dd></div>
-            <div><dt>phone</dt><dd><a href="tel:+12403860822">+1 (240) 386-0822</a></dd></div>
+          <dl class="badge-card__list">
+            <div><dt>Location</dt><dd>Raleigh, NC</dd></div>
+            <div><dt>Experience</dt><dd>4+ yrs</dd></div>
+            <div><dt>Certified</dt><dd>AWS · Data Engineer</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:nehadabeeru@outlook.com">nehadabeeru@outlook.com</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+12403860822">+1 (240) 386-0822</a></dd></div>
           </dl>
         </div>
       </aside>
@@ -188,6 +192,93 @@
           </ul>
           <div class="tags">
             <span>PyTorch</span><span>FAISS</span><span>FastAPI</span><span>Docker</span>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="subhead">Academic &amp; applied projects</h3>
+      <div class="grid grid--three">
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>ChurnXpert</h3>
+            <span class="chip">Oct–Dec 2024</span>
+          </div>
+          <p class="muted small">Telecom churn prediction · San José State University</p>
+          <p class="small">Predicted churn risk and high-risk segments from behavioral, demographic, contract, and billing data. Compared Logistic Regression, Decision Trees, Random Forest, and XGBoost with RFE feature selection and hyperparameter tuning; used K-Means clustering and anomaly detection to surface at-risk patterns.</p>
+          <div class="tags">
+            <span>XGBoost</span><span>Random Forest</span><span>K-Means</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>TOURBOT</h3>
+            <span class="chip">Feb–May 2024</span>
+          </div>
+          <p class="muted small">AI travel recommendation chatbot · San José State University</p>
+          <p class="small">Deep-learning travel recommender combining NLP and LSTM with PCA-based feature extraction for personalization. Benchmarked LSTM against LLM-based approaches using precision, recall, F1, MRR, and cosine similarity.</p>
+          <div class="tags">
+            <span>LLM</span><span>NLP</span><span>LSTM</span><span>PCA</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>BayWheelz</h3>
+            <span class="chip">Mar–May 2024</span>
+          </div>
+          <p class="muted small">Bay Area bike-demand prediction · San José State University</p>
+          <p class="small">Forecasted daily rider counts per city from time, weather, and rider-behavior features. Flask app comparing multiple regressors for ridership prediction after data preprocessing and feature engineering.</p>
+          <div class="tags">
+            <span>Flask</span><span>XGBoost</span><span>Regression</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>Financial Service Complaints</h3>
+            <span class="chip">Sep–Dec 2023</span>
+          </div>
+          <p class="muted small">ML on CFPB complaint data · San José State University</p>
+          <p class="small">Built and compared four models (BERT, LSTM, XGBoost, ElasticNet) on the CFPB complaint database; LSTM reached 82% accuracy, informing complaint-handling and service-delivery decisions.</p>
+          <div class="tags">
+            <span>BERT</span><span>LSTM</span><span>XGBoost</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>SFJobSync+</h3>
+            <span class="chip">Sep–Dec 2023</span>
+          </div>
+          <p class="muted small">SF County job data platform · San José State University</p>
+          <p class="small">Big-data pipeline and web app for SF County employees on AWS (Redshift, S3, EC2), with dual Kafka producers for real-time streaming, PySpark transforms, a React UI, and REST APIs. Logistic Regression model reached 94% accuracy; Redshift + Tableau powered decision-support analytics.</p>
+          <div class="tags">
+            <span>AWS</span><span>Kafka</span><span>PySpark</span><span>React</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>US Gun Violence Analysis</h3>
+            <span class="chip">Feb–May 2023</span>
+          </div>
+          <p class="muted small">Multi-store performance analysis · San José State University</p>
+          <p class="small">Extracted insights from a national dataset using Snowflake alongside RDBMS, MongoDB, and Redis, then visualized findings in Tableau to inform data-driven conclusions.</p>
+          <div class="tags">
+            <span>Snowflake</span><span>MongoDB</span><span>Redis</span><span>Tableau</span>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>Stock Market Prediction Model</h3>
+            <span class="chip">SRM University</span>
+          </div>
+          <p class="muted small">Trend-aware price prediction</p>
+          <p class="small">Analyzed historical stock data to predict future price movements, combining Linear Regression, Decision Trees, and Neural Networks to help evaluate trading strategies.</p>
+          <div class="tags">
+            <span>Python</span><span>Machine Learning</span>
           </div>
         </article>
       </div>
