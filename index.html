@@ -8,7 +8,7 @@
   <link href="style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn--sm btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Résumé ↓</a>
+      <a class="btn btn--sm btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume ↓</a>
       <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -31,11 +31,15 @@
   </header>
 
   <main id="top" class="hero">
+    <div class="blob blob--one" aria-hidden="true"></div>
+    <div class="blob blob--two" aria-hidden="true"></div>
+    <div class="blob blob--three" aria-hidden="true"></div>
+
     <div class="container hero__inner reveal">
       <div class="hero__copy">
-        <p class="tagline">Software Engineer — available for new roles</p>
-        <h1 class="hero__title">Neha Dabeeru</h1>
-        <p class="role-tag">Backend &amp; GenAI Platforms</p>
+        <p class="script-tag">hi, i'm</p>
+        <h1 class="hero__title">Neha <span class="grad-text">Dabeeru</span></h1>
+        <p class="role-tag">Software Engineer · Backend &amp; GenAI Platforms</p>
         <p class="lead">
           4+ years designing and shipping backend systems at scale — serverless APIs,
           event-driven pipelines, and distributed workflows for high-traffic, production
@@ -50,12 +54,12 @@
       </div>
 
       <aside class="hero__status" aria-label="Availability status">
-        <div class="status-panel">
-          <div class="status-panel__head">
+        <div class="badge-card">
+          <div class="badge-card__head">
             <span class="dot" aria-hidden="true"></span>
-            <span>Open to opportunities</span>
+            <span>open to opportunities</span>
           </div>
-          <dl class="status-panel__list">
+          <dl class="badge-card__list">
             <div><dt>Location</dt><dd>Raleigh, NC</dd></div>
             <div><dt>Experience</dt><dd>4+ yrs</dd></div>
             <div><dt>Certified</dt><dd>AWS · Data Engineer</dd></div>
@@ -174,6 +178,9 @@
           <div class="tags">
             <span>Python</span><span>AWS Bedrock</span><span>pgvector</span><span>PostgreSQL</span>
           </div>
+          <div class="row">
+            <a class="link" href="https://www.csoptima.com/videos/CS-Dataflo-launch.mp4" target="_blank" rel="noopener">▶ Launch video</a>
+          </div>
         </article>
 
         <article class="card card--project">
@@ -189,6 +196,10 @@
           <div class="tags">
             <span>PyTorch</span><span>FAISS</span><span>FastAPI</span><span>Docker</span>
           </div>
+          <div class="row">
+            <a class="link" href="https://devpost.com/software/medpredict-hospital-readmission-prediction-model" target="_blank" rel="noopener">Devpost</a>
+            <a class="link" href="https://www.youtube.com/watch?v=6ZcuRE0I8I0" target="_blank" rel="noopener">▶ Demo video</a>
+          </div>
         </article>
       </div>
 
@@ -200,7 +211,11 @@
             <span class="chip">Oct–Dec 2024</span>
           </div>
           <p class="muted small">Telecom churn prediction · San José State University</p>
-          <p class="small">Predicted churn risk and high-risk segments from behavioral, demographic, contract, and billing data. Compared Logistic Regression, Decision Trees, Random Forest, and XGBoost with RFE feature selection and hyperparameter tuning; used K-Means clustering and anomaly detection to surface at-risk patterns.</p>
+          <ul class="bullets small">
+            <li>Predicted churn risk and high-risk segments from behavioral, demographic, contract, and billing data.</li>
+            <li>Compared Logistic Regression, Decision Trees, Random Forest, and XGBoost with RFE feature selection and hyperparameter tuning.</li>
+            <li>Used K-Means clustering and anomaly detection to surface at-risk behavioral patterns.</li>
+          </ul>
           <div class="tags">
             <span>XGBoost</span><span>Random Forest</span><span>K-Means</span>
           </div>
@@ -212,9 +227,15 @@
             <span class="chip">Feb–May 2024</span>
           </div>
           <p class="muted small">AI travel recommendation chatbot · San José State University</p>
-          <p class="small">Deep-learning travel recommender combining NLP and LSTM with PCA-based feature extraction for personalization. Benchmarked LSTM against LLM-based approaches using precision, recall, F1, MRR, and cosine similarity.</p>
+          <ul class="bullets small">
+            <li>Built a deep-learning travel recommender combining NLP and LSTM with PCA-based feature extraction for personalization.</li>
+            <li>Benchmarked LSTM against LLM-based approaches using precision, recall, F1, MRR, and cosine similarity.</li>
+          </ul>
           <div class="tags">
             <span>LLM</span><span>NLP</span><span>LSTM</span><span>PCA</span>
+          </div>
+          <div class="row">
+            <a class="link" href="https://devpost.com/software/tourbot" target="_blank" rel="noopener">Devpost</a>
           </div>
         </article>
 
@@ -224,7 +245,10 @@
             <span class="chip">Mar–May 2024</span>
           </div>
           <p class="muted small">Bay Area bike-demand prediction · San José State University</p>
-          <p class="small">Forecasted daily rider counts per city from time, weather, and rider-behavior features. Flask app comparing multiple regressors for ridership prediction after data preprocessing and feature engineering.</p>
+          <ul class="bullets small">
+            <li>Forecasted daily rider counts per city from time, weather, and rider-behavior features.</li>
+            <li>Built a Flask app comparing multiple regressors for ridership prediction after data preprocessing and feature engineering.</li>
+          </ul>
           <div class="tags">
             <span>Flask</span><span>XGBoost</span><span>Regression</span>
           </div>
@@ -236,7 +260,10 @@
             <span class="chip">Sep–Dec 2023</span>
           </div>
           <p class="muted small">ML on CFPB complaint data · San José State University</p>
-          <p class="small">Built and compared four models (BERT, LSTM, XGBoost, ElasticNet) on the CFPB complaint database; LSTM reached 82% accuracy, informing complaint-handling and service-delivery decisions.</p>
+          <ul class="bullets small">
+            <li>Built and compared four models (BERT, LSTM, XGBoost, ElasticNet) on the CFPB complaint database.</li>
+            <li>LSTM reached 82% accuracy, informing complaint-handling and service-delivery decisions.</li>
+          </ul>
           <div class="tags">
             <span>BERT</span><span>LSTM</span><span>XGBoost</span>
           </div>
@@ -248,7 +275,11 @@
             <span class="chip">Sep–Dec 2023</span>
           </div>
           <p class="muted small">SF County job data platform · San José State University</p>
-          <p class="small">Big-data pipeline and web app for SF County employees on AWS (Redshift, S3, EC2), with dual Kafka producers for real-time streaming, PySpark transforms, a React UI, and REST APIs. Logistic Regression model reached 94% accuracy; Redshift + Tableau powered decision-support analytics.</p>
+          <ul class="bullets small">
+            <li>Built a big-data pipeline and web app for SF County employees on AWS (Redshift, S3, EC2).</li>
+            <li>Streamed real-time data with dual Kafka producers and PySpark transforms into a React UI via REST APIs.</li>
+            <li>Logistic Regression model reached 94% accuracy; Redshift + Tableau powered decision-support analytics.</li>
+          </ul>
           <div class="tags">
             <span>AWS</span><span>Kafka</span><span>PySpark</span><span>React</span>
           </div>
@@ -260,7 +291,10 @@
             <span class="chip">Feb–May 2023</span>
           </div>
           <p class="muted small">Multi-store performance analysis · San José State University</p>
-          <p class="small">Extracted insights from a national dataset using Snowflake alongside RDBMS, MongoDB, and Redis, then visualized findings in Tableau to inform data-driven conclusions.</p>
+          <ul class="bullets small">
+            <li>Extracted insights from a national dataset using Snowflake alongside RDBMS, MongoDB, and Redis.</li>
+            <li>Visualized findings in Tableau to inform data-driven conclusions.</li>
+          </ul>
           <div class="tags">
             <span>Snowflake</span><span>MongoDB</span><span>Redis</span><span>Tableau</span>
           </div>
@@ -272,9 +306,15 @@
             <span class="chip">SRM University</span>
           </div>
           <p class="muted small">Trend-aware price prediction</p>
-          <p class="small">Analyzed historical stock data to predict future price movements, combining Linear Regression, Decision Trees, and Neural Networks to help evaluate trading strategies.</p>
+          <ul class="bullets small">
+            <li>Analyzed historical stock data to predict future price movements.</li>
+            <li>Combined Linear Regression, Decision Trees, and Neural Networks to help evaluate trading strategies.</li>
+          </ul>
           <div class="tags">
             <span>Python</span><span>Machine Learning</span>
+          </div>
+          <div class="row">
+            <a class="link" href="https://www.ijitee.org/wp-content/uploads/papers/v9i9/I7642079920.pdf" target="_blank" rel="noopener">Published paper</a>
           </div>
         </article>
       </div>
@@ -285,54 +325,38 @@
     <div class="container reveal">
       <p class="eyebrow">04 · Skills</p>
       <h2 class="section__title">Technical skills</h2>
-      <div class="skills">
-        <div class="skill__group">
-          <h3>Languages</h3>
-          <div class="badges">
-            <span>Python</span><span>Java</span><span>SQL</span><span>JavaScript</span><span>TypeScript</span>
-          </div>
+      <div class="skill-list">
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Languages</h3>
+          <p>Python, Java, SQL, JavaScript, TypeScript</p>
         </div>
-        <div class="skill__group">
-          <h3>GenAI &amp; ML</h3>
-          <div class="badges">
-            <span>AWS Bedrock (Claude/Haiku)</span><span>Prompt Engineering</span><span>RAG</span><span>Vector Search</span><span>pgvector</span><span>FAISS</span><span>PyTorch</span><span>Transformer Embeddings</span><span>Model Serving</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>GenAI &amp; ML</h3>
+          <p>AWS Bedrock (Claude/Haiku), Prompt Engineering, RAG, Vector Search, pgvector, FAISS, PyTorch, Transformer Embeddings, Model Serving</p>
         </div>
-        <div class="skill__group">
-          <h3>Backend &amp; APIs</h3>
-          <div class="badges">
-            <span>REST APIs</span><span>GraphQL</span><span>FastAPI</span><span>AWS AppSync</span><span>API Gateway</span><span>AWS Lambda</span><span>VTL Resolvers</span><span>Async Processing</span><span>Auth/AuthZ</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Backend &amp; APIs</h3>
+          <p>REST APIs, GraphQL, FastAPI, AWS AppSync, API Gateway, AWS Lambda, VTL Resolvers, Async Processing, Auth/AuthZ</p>
         </div>
-        <div class="skill__group">
-          <h3>Distributed Systems</h3>
-          <div class="badges">
-            <span>Event-Driven Architecture</span><span>Serverless</span><span>Workflow Orchestration</span><span>Message Queues</span><span>Idempotency</span><span>Retry Strategies</span><span>Failure Recovery</span><span>State Management</span><span>Optimistic Locking</span><span>Concurrency Control</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Distributed Systems</h3>
+          <p>Event-Driven Architecture, Serverless, Workflow Orchestration, Message Queues, Idempotency, Retry Strategies, Failure Recovery, State Management, Optimistic Locking, Concurrency Control</p>
         </div>
-        <div class="skill__group">
-          <h3>AWS &amp; Cloud</h3>
-          <div class="badges">
-            <span>Lambda</span><span>Step Functions</span><span>EventBridge</span><span>SQS</span><span>S3</span><span>DynamoDB</span><span>AppSync</span><span>API Gateway</span><span>OpenSearch</span><span>EMR</span><span>EC2</span><span>IAM</span><span>KMS</span><span>CloudWatch</span><span>X-Ray</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>AWS &amp; Cloud</h3>
+          <p>Lambda, Step Functions, EventBridge, SQS, S3, DynamoDB, AppSync, API Gateway, OpenSearch, EMR, EC2, IAM, KMS, CloudWatch, X-Ray</p>
         </div>
-        <div class="skill__group">
-          <h3>Databases &amp; Search</h3>
-          <div class="badges">
-            <span>PostgreSQL</span><span>MySQL</span><span>DynamoDB</span><span>Snowflake</span><span>Delta Lake</span><span>Amazon OpenSearch</span><span>HDFS</span><span>Hive</span><span>Impala</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Databases &amp; Search</h3>
+          <p>PostgreSQL, MySQL, DynamoDB, Snowflake, Delta Lake, Amazon OpenSearch, HDFS, Hive, Impala</p>
         </div>
-        <div class="skill__group">
-          <h3>Data Processing</h3>
-          <div class="badges">
-            <span>Apache Spark</span><span>PySpark</span><span>Spark SQL</span><span>Databricks</span><span>ETL/ELT</span><span>Schema Enforcement</span><span>Data Reconciliation</span><span>Deduplication</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Data Processing</h3>
+          <p>Apache Spark, PySpark, Spark SQL, Databricks, ETL/ELT, Schema Enforcement, Data Reconciliation, Deduplication</p>
         </div>
-        <div class="skill__group">
-          <h3>Infrastructure &amp; DevOps</h3>
-          <div class="badges">
-            <span>Terraform</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>Git</span><span>IaC</span><span>Structured Logging</span><span>Monitoring</span><span>Distributed Tracing</span><span>Production Support</span>
-          </div>
+        <div class="skill-row">
+          <h3><span class="skill__dot" aria-hidden="true"></span>Infrastructure &amp; DevOps</h3>
+          <p>Terraform, Docker, GitHub Actions, CI/CD, Git, IaC, Structured Logging, Monitoring, Distributed Tracing, Production Support</p>
         </div>
       </div>
     </div>
@@ -383,7 +407,7 @@
         <a class="btn btn--ghost" href="tel:+12403860822">+1 (240) 386-0822</a>
         <a class="btn btn--ghost" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn--ghost" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a class="btn btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </section>

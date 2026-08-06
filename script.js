@@ -48,3 +48,28 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Stagger index for tag pills and skill rows so they cascade in smoothly
+document.querySelectorAll('.tags').forEach(group => {
+  Array.from(group.children).forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
+});
+document.querySelectorAll('.skill-list').forEach(list => {
+  Array.from(list.children).forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
+});
+
+// Gentle mouse parallax on hero blobs
+const blobs = document.querySelectorAll('.blob');
+if (blobs.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+    blobs.forEach((b, i) => {
+      const strength = (i + 1) * 10;
+      b.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+    });
+  });
+}
