@@ -34,7 +34,6 @@
         <a href="#spec-system">Case Study</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#decisions">Decisions</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -56,9 +55,9 @@
         <h1 class="hero__title">Neha <span class="grad-text">Dabeeru</span></h1>
         <p class="role-tag">Software Engineer · Backend &amp; GenAI Platforms</p>
         <p class="lead">
-          Python Backend Engineer building production APIs, distributed workflows, and
-          GenAI platforms on AWS. I work across GraphQL, event-driven systems, DynamoDB,
-          OpenSearch, RAG, and production reliability.
+          Python backend engineer building production APIs, distributed workflows, and
+          GenAI platforms on AWS, with a focus on GraphQL, event-driven systems,
+          retrieval, and reliability.
         </p>
         <div class="actions">
           <a class="btn" href="mailto:nehadabeeru@outlook.com">Get in touch</a>
@@ -154,21 +153,11 @@
                 </div>
               </div>
             </header>
+            <p class="case__label">Clinical Encoding Platform</p>
             <ul class="bullets">
-              <li><strong>Platform overview</strong> — CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally.</li>
-            </ul>
-            <p class="case__label">What I worked on</p>
-            <ul class="bullets">
-              <li>AppSync/GraphQL APIs</li>
-              <li>Hybrid auto-coding engine (BM25 + neural k-NN)</li>
-              <li>Async workflows / Databricks integration</li>
-              <li>Audit and MuleSoft partner integrations</li>
-            </ul>
-            <p class="case__label">Key engineering problems solved</p>
-            <ul class="bullets">
-              <li>Root-caused AppSync timeouts to Databricks cold-start latency (30s+); redesigned the flow as AppSync → DynamoDB job → Streams → Step Functions → Databricks/Lambda → GraphQL subscription, replacing synchronous polling with async resolver execution and connection caching.</li>
+              <li>CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally.</li>
               <li>Built a hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic for auto-coding accuracy.</li>
-              <li>Designed append-only audit logging (DynamoDB Global Tables) for full traceability of state changes across users.</li>
+              <li>Redesigned long-running AppSync operations as async workflows using DynamoDB Streams, Step Functions, and GraphQL subscriptions after Databricks cold starts exceeded 30 seconds.</li>
               <li>Built the MuleSoft integration layer connecting internal services to external partner systems, automating manual data corrections.</li>
             </ul>
             <div class="flow">
@@ -180,12 +169,23 @@
               <span class="flow__node">GraphQL subscription</span><span class="flow__arrow">→</span>
               <span class="flow__node">UI</span>
             </div>
+
+            <p class="case__label">Specification Management System</p>
+            <ul class="bullets">
+              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access. <a class="link" href="#spec-system">Full case study ↓</a></li>
+            </ul>
+
+            <p class="case__label">Reliability &amp; Production Engineering</p>
+            <ul class="bullets">
+              <li>Implemented append-only DynamoDB audit logging with Global Tables replication, tracking user actions and state changes for 2K+ users.</li>
+              <li>Engineered a 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect.</li>
+            </ul>
+
             <p class="case__label">Impact</p>
             <ul class="bullets">
               <li>2K+ users across the platform</li>
               <li>99.52% top-match auto-coding accuracy (98.46% on secondary matches)</li>
               <li>5–6 hour incremental sync for updated clinical data</li>
-              <li>12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect</li>
             </ul>
             <div class="tags">
               <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Step Functions</span><span>Databricks</span><span>MuleSoft</span><span>pytest</span>
@@ -233,8 +233,8 @@
               </div>
             </header>
             <ul class="bullets">
-              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 30%.</li>
-              <li>Reduced infrastructure costs 30% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
+              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 60%.</li>
+              <li>Reduced infrastructure costs 35% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
               <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
               <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
               <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
@@ -294,24 +294,25 @@
           </div>
           <p class="muted small">GenAI clinical data platform</p>
           <p class="case__label">Problem</p>
-          <p class="small">Mapping clinical study fields to CDASH standards was a manual, 8–12 week process per study, gating downstream regulatory submission work.</p>
+          <p class="small">Mapping clinical study fields to CDASH standards was a manual, 8–10 week process per study, gating downstream regulatory submission work.</p>
           <p class="case__label">Architecture</p>
           <div class="flow flow--sm">
-            <span class="flow__node">Raw schema</span><span class="flow__arrow">→</span>
-            <span class="flow__node">pgvector retrieval</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Prompt construction</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Claude Haiku rerank</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Confidence scoring</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Auto-apply / human review</span>
+            <span class="flow__node">Input schema</span><span class="flow__arrow">→</span>
+            <span class="flow__node">pgvector candidate retrieval</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Claude/OpenAI reranking</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Confidence score</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Auto-map / human review</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Persisted mapping + audit trail</span>
           </div>
+          <p class="small">Multi-model reranking with confidence thresholds means a single model's blind spot or an outage doesn't stall the pipeline — low-confidence or disagreeing results fall back to a second model or a human reviewer instead of silently shipping a wrong mapping.</p>
           <p class="case__label">GenAI design</p>
           <p class="small">pgvector similarity search retrieves candidate CDASH matches; AWS Bedrock (Claude Haiku) reranks to confirm the best match using prompt-engineered comparison logic.</p>
           <p class="case__label">Backend &amp; safety</p>
           <p class="small">PostgreSQL/DynamoDB-backed persistence with a confidence-tiered mapping workflow — high-confidence matches auto-apply, low-confidence matches route to human-in-the-loop review, balancing speed with accuracy for regulatory readiness. DQ Checker adds a GenAI rule engine so SMEs author 100+ data quality checks in plain language instead of manual rule-scripting.</p>
           <p class="case__label">Impact</p>
-          <p class="small">Reduced study onboarding from 8–12 weeks to 1 week.</p>
+          <p class="small">Reduced study onboarding from 8–10 weeks to 1 week.</p>
           <div class="tags">
-            <span>Python</span><span>AWS Bedrock</span><span>pgvector</span><span>PostgreSQL</span><span>RAG</span>
+            <span>Python</span><span>AWS Bedrock</span><span>OpenAI</span><span>pgvector</span><span>PostgreSQL</span><span>RAG</span>
           </div>
           <div class="row">
             <a class="link" href="https://www.csoptima.com/videos/CS-Dataflo-launch.mp4" target="_blank" rel="noopener">▶ Launch video</a>
@@ -327,11 +328,11 @@
           <p class="case__label">Dataset &amp; model pipeline</p>
           <p class="small">100GB of MIMIC-III clinical data (40K+ records), processed through PubMedBERT, ClinicalXLNet, and BigBird transformer models for embeddings and classification.</p>
           <div class="flow flow--sm">
-            <span class="flow__node">Input</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Embeddings</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Clinical record</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Transformer embedding</span><span class="flow__arrow">→</span>
             <span class="flow__node">FAISS retrieval</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Classifier</span><span class="flow__arrow">→</span>
-            <span class="flow__node">FastAPI</span><span class="flow__arrow">→</span>
+            <span class="flow__node">PyTorch classifier</span><span class="flow__arrow">→</span>
+            <span class="flow__node">FastAPI inference API</span><span class="flow__arrow">→</span>
             <span class="flow__node">AWS deployment</span>
           </div>
           <p class="case__label">Retrieval &amp; serving</p>
@@ -540,39 +541,10 @@
     </div>
   </section>
 
-  <section id="decisions" class="section">
-    <div class="container reveal">
-      <p class="eyebrow">06 · Engineering Decisions</p>
-      <h2 class="section__title">Selected engineering decisions</h2>
-      <div class="grid grid--two">
-        <div class="card card--decision">
-          <p class="case__label">Why async orchestration instead of extending synchronous timeouts</p>
-          <p class="small">Bumping the AppSync timeout would have masked the real problem — Databricks cold-start latency. Moving to an async resolver flow (DynamoDB job → Streams → Step Functions → GraphQL subscription) fixed the actual bottleneck instead of hiding it behind a longer wait.</p>
-        </div>
-        <div class="card card--decision">
-          <p class="case__label">Why hybrid BM25 + neural retrieval</p>
-          <p class="small">Pure keyword matching (BM25) missed semantic near-matches; pure neural k-NN missed exact terminology matches clinicians expect. Combining both with custom score normalization and tie-breaking gave higher accuracy than either alone.</p>
-        </div>
-        <div class="card card--decision">
-          <p class="case__label">Why DynamoDB for workflow/audit state</p>
-          <p class="small">Audit trails need append-only writes with predictable low-latency reads at scale, not complex relational queries. DynamoDB Global Tables gave full traceability of state changes without the operational overhead of a relational audit schema.</p>
-        </div>
-        <div class="card card--decision">
-          <p class="case__label">Why confidence thresholds and human review</p>
-          <p class="small">In a regulated clinical context, a wrong auto-applied match is worse than a slower one. Confidence-tiered routing auto-applies only high-confidence matches and sends the rest to human review, trading a little speed for accuracy where it matters most.</p>
-        </div>
-        <div class="card card--decision">
-          <p class="case__label">Why versioned states instead of mutable specs</p>
-          <p class="small">Encoding specifications feed downstream regulatory processes — silently overwriting a spec destroys the history of who changed what and when. A draft → publish → promote workflow with versioning makes every change traceable instead of lost.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <section id="education" class="section">
     <div class="container reveal">
-      <p class="eyebrow">07 · Education &amp; Certification</p>
+      <p class="eyebrow">06 · Education &amp; Certification</p>
       <h2 class="section__title">Education</h2>
       <div class="grid grid--two">
         <div class="card card--org">
@@ -606,7 +578,7 @@
 
   <section id="contact" class="section section--alt">
     <div class="container reveal">
-      <p class="eyebrow">08 · Contact</p>
+      <p class="eyebrow">07 · Contact</p>
       <h2 class="section__title">Let's talk</h2>
       <p class="body contact-lead">Open to Software Engineer, Backend, Data &amp; AI Platform roles. Based in Raleigh, NC — open to remote and relocation.</p>
       <div class="contact">

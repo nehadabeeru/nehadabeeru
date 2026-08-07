@@ -318,9 +318,6 @@ p.small + .case__label{ margin-top:16px; }
 .flow--sm .flow__node{ font-size:.72rem; padding:6px 11px; }
 .flow__arrow{ color: var(--accent-2); font-weight:700; font-size:.9rem; }
 
-.card--decision{ display:flex; flex-direction:column; }
-.card--decision .case__label{ color: var(--accent); }
-
 .tags--core span{
   background: var(--grad); color:#fff; border-color:transparent;
 }
