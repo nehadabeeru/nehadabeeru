@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Neha Dabeeru · Software Engineer</title>
   <meta name="description" content="Neha Dabeeru — Software Engineer specializing in backend systems, distributed architecture, and GenAI platforms. AWS Certified Data Engineer – Associate." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Neha Dabeeru — Software Engineer" />
+  <meta property="og:description" content="Backend & GenAI Platforms Engineer. AWS Certified Data Engineer — Associate." />
+  <meta property="og:image" content="https://nehadabeeru.github.io/nehadabeeru/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://nehadabeeru.github.io/nehadabeeru/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Neha Dabeeru — Software Engineer" />
+  <meta name="twitter:description" content="Backend & GenAI Platforms Engineer. AWS Certified Data Engineer — Associate." />
+  <meta name="twitter:image" content="https://nehadabeeru.github.io/nehadabeeru/og-image.png" />
   <link href="style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +31,10 @@
       <nav class="nav__links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#spec-system">Case Study</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#decisions">Decisions</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -41,14 +56,15 @@
         <h1 class="hero__title">Neha <span class="grad-text">Dabeeru</span></h1>
         <p class="role-tag">Software Engineer · Backend &amp; GenAI Platforms</p>
         <p class="lead">
-          4+ years designing and shipping backend systems at scale — serverless APIs,
-          event-driven pipelines, and distributed workflows for high-traffic, production
-          environments. Track record of root-causing production issues, hardening systems
-          against silent failures, and driving reliability through rigorous testing.
+          Python Backend Engineer building production APIs, distributed workflows, and
+          GenAI platforms on AWS. I work across GraphQL, event-driven systems, DynamoDB,
+          OpenSearch, RAG, and production reliability.
         </p>
         <div class="actions">
           <a class="btn" href="mailto:nehadabeeru@outlook.com">Get in touch</a>
-          <a class="btn btn--ghost" href="#contact">Contact info ↓</a>
+          <a class="btn btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume ↓</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
 
@@ -110,6 +126,9 @@
           <p class="body">
             I care about the parts of engineering that don't show up in a demo: idempotency, retry safety, structured logging, and the kind of test coverage that catches a regression before a customer does.
           </p>
+          <p class="body">
+            I'm most interested in systems where backend reliability and AI meet: async orchestration, retrieval pipelines, state management, failure recovery, and turning model output into production-grade workflows.
+          </p>
         </div>
       </div>
     </div>
@@ -136,18 +155,40 @@
               </div>
             </header>
             <ul class="bullets">
-              <li>Built hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic, achieving 99.52%/98.46% auto-coding accuracy on MedDRA/WHODrug terms.</li>
-              <li>Root-caused AppSync timeout failures to Databricks cold-start latency (30s+); eliminated via async resolver execution, then optimized further with connection caching for reliable sub-timeout responses.</li>
-              <li>Implemented immutable audit logging system (DynamoDB Global Tables) providing 100% traceability of state changes for 2K+ users.</li>
-              <li>Designed GraphQL API layer replacing rate-limited REST backend, supporting 20+ concurrent sessions with sub-second response times.</li>
-              <li>Developed real-time Mulesoft integration layer connecting internal services to external systems, automating manual data corrections.</li>
-              <li>Engineered 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity fix.</li>
-              <li>Led the Specification Management System end-to-end — a web application replacing a manual, error-prone Excel-based workflow for managing encoding specifications across clinical trials; owned requirements gathering, UI design, and demos to business leads, technical architects, and encoding specialists.</li>
-              <li>Introduced a structured draft → publish → promote workflow with versioning, audit trails, and role-based access, bringing rigor to a process that previously relied on spreadsheets and manual handoffs between teams.</li>
-              <li>Navigated shifting requirements as the customer's organizational model evolved — proposed architectural improvements like eliminating redundant file storage by sending raw data instead of Excel exports, and advocated for clean separation of concerns in approval workflows.</li>
+              <li><strong>Platform overview</strong> — CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally.</li>
+            </ul>
+            <p class="case__label">What I worked on</p>
+            <ul class="bullets">
+              <li>AppSync/GraphQL APIs</li>
+              <li>Hybrid auto-coding engine (BM25 + neural k-NN)</li>
+              <li>Async workflows / Databricks integration</li>
+              <li>Audit and MuleSoft partner integrations</li>
+            </ul>
+            <p class="case__label">Key engineering problems solved</p>
+            <ul class="bullets">
+              <li>Root-caused AppSync timeouts to Databricks cold-start latency (30s+); redesigned the flow as AppSync → DynamoDB job → Streams → Step Functions → Databricks/Lambda → GraphQL subscription, replacing synchronous polling with async resolver execution and connection caching.</li>
+              <li>Built a hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic for auto-coding accuracy.</li>
+              <li>Designed append-only audit logging (DynamoDB Global Tables) for full traceability of state changes across users.</li>
+              <li>Built the MuleSoft integration layer connecting internal services to external partner systems, automating manual data corrections.</li>
+            </ul>
+            <div class="flow">
+              <span class="flow__node">AppSync</span><span class="flow__arrow">→</span>
+              <span class="flow__node">DynamoDB job</span><span class="flow__arrow">→</span>
+              <span class="flow__node">Streams</span><span class="flow__arrow">→</span>
+              <span class="flow__node">Step Functions</span><span class="flow__arrow">→</span>
+              <span class="flow__node">Databricks/Lambda</span><span class="flow__arrow">→</span>
+              <span class="flow__node">GraphQL subscription</span><span class="flow__arrow">→</span>
+              <span class="flow__node">UI</span>
+            </div>
+            <p class="case__label">Impact</p>
+            <ul class="bullets">
+              <li>2K+ users across the platform</li>
+              <li>99.52% top-match auto-coding accuracy (98.46% on secondary matches)</li>
+              <li>5–6 hour incremental sync for updated clinical data</li>
+              <li>12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect</li>
             </ul>
             <div class="tags">
-              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Databricks</span><span>Mulesoft</span><span>pytest</span><span>Product Ownership</span>
+              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Step Functions</span><span>Databricks</span><span>MuleSoft</span><span>pytest</span>
             </div>
           </div>
         </li>
@@ -210,9 +251,39 @@
     </div>
   </section>
 
+  <section id="spec-system" class="section section--alt">
+    <div class="container reveal">
+      <p class="eyebrow">03 · Case Study</p>
+      <h2 class="section__title">Specification Management System</h2>
+      <p class="muted small" style="margin-bottom:24px;">Merck Sharp &amp; Dohme · Jan 2025 – Present</p>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <p class="case__label">Problem</p>
+          <p class="body">Encoding specifications for clinical trials were managed through Excel and manual handoffs between business leads, technical architects, and encoding specialists — slow, error-prone, and impossible to audit.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">My role</p>
+          <p class="body">Requirements gathering, architecture, implementation, UI design, and stakeholder demos — owned the product end-to-end from the first conversation with business leads through production rollout.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">Architecture &amp; features</p>
+          <p class="body">Draft → Publish → Promote workflow with role-based access control, full audit history, versioning, and explicit approval states replacing ad-hoc spreadsheet edits.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">Engineering decisions</p>
+          <p class="body">Avoided redundant file storage by sending raw data instead of Excel exports; separated approval concerns into distinct workflow states; kept scope manageable as requirements shifted with the customer's evolving organizational model.</p>
+        </div>
+      </div>
+
+      <p class="case__label" style="margin-top:8px;">Impact</p>
+      <p class="body">Replaced a fully manual, spreadsheet-based workflow with a governed application — bringing versioning, audit trails, and role-based access to a process that previously had none.</p>
+    </div>
+  </section>
+
   <section id="projects" class="section">
     <div class="container reveal">
-      <p class="eyebrow">03 · Projects</p>
+      <p class="eyebrow">04 · Projects</p>
       <h2 class="section__title">Selected engineering projects</h2>
 
       <div class="grid grid--two">
@@ -222,13 +293,25 @@
             <span class="chip chip--live">production</span>
           </div>
           <p class="muted small">GenAI clinical data platform</p>
-          <ul class="bullets small">
-            <li>Built AI-driven field-mapping engine: pgvector similarity search retrieves candidate CDASH matches, Bedrock (Claude Haiku) reranks to confirm best match, reducing study onboarding from 8–12 weeks to 1 week.</li>
-            <li>Designed confidence-tiered mapping workflow: high-confidence matches auto-applied, low-confidence matches routed to human review, balancing speed with accuracy for regulatory submission readiness.</li>
-            <li>Built GenAI rule engine (DQ Checker) enabling SMEs to author data quality checks in plain language, eliminating manual rule-scripting.</li>
-          </ul>
+          <p class="case__label">Problem</p>
+          <p class="small">Mapping clinical study fields to CDASH standards was a manual, 8–12 week process per study, gating downstream regulatory submission work.</p>
+          <p class="case__label">Architecture</p>
+          <div class="flow flow--sm">
+            <span class="flow__node">Raw schema</span><span class="flow__arrow">→</span>
+            <span class="flow__node">pgvector retrieval</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Prompt construction</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Claude Haiku rerank</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Confidence scoring</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Auto-apply / human review</span>
+          </div>
+          <p class="case__label">GenAI design</p>
+          <p class="small">pgvector similarity search retrieves candidate CDASH matches; AWS Bedrock (Claude Haiku) reranks to confirm the best match using prompt-engineered comparison logic.</p>
+          <p class="case__label">Backend &amp; safety</p>
+          <p class="small">PostgreSQL/DynamoDB-backed persistence with a confidence-tiered mapping workflow — high-confidence matches auto-apply, low-confidence matches route to human-in-the-loop review, balancing speed with accuracy for regulatory readiness. DQ Checker adds a GenAI rule engine so SMEs author 100+ data quality checks in plain language instead of manual rule-scripting.</p>
+          <p class="case__label">Impact</p>
+          <p class="small">Reduced study onboarding from 8–12 weeks to 1 week.</p>
           <div class="tags">
-            <span>Python</span><span>AWS Bedrock</span><span>pgvector</span><span>PostgreSQL</span>
+            <span>Python</span><span>AWS Bedrock</span><span>pgvector</span><span>PostgreSQL</span><span>RAG</span>
           </div>
           <div class="row">
             <a class="link" href="https://www.csoptima.com/videos/CS-Dataflo-launch.mp4" target="_blank" rel="noopener">▶ Launch video</a>
@@ -241,12 +324,22 @@
             <span class="chip chip--live">shipped</span>
           </div>
           <p class="muted small">Hospital readmission prediction system with LLMs</p>
-          <ul class="bullets small">
-            <li>Built an end-to-end readmission-risk pipeline combining PubMedBERT, ClinicalXLNet, and BigBird transformer models with FAISS retrieval and PyTorch classification, trained on 100GB of MIMIC-III clinical data (40K+ records), achieving 92%+ accuracy.</li>
-            <li>Built an interactive RAG (Retrieval-Augmented Generation) prototype using the GPT-4 API to surface actionable clinical insights, improving decision-making efficiency by ~80%.</li>
-            <li>Shipped a full-stack, Dockerized application — Angular frontend, FastAPI backend, Firebase authentication, and AWS S3 for large-scale clinical data storage — with real-time inference at ~2s latency.</li>
-            <li>Designed for HIPAA-compliant handling of sensitive clinical data end-to-end, from ingestion through inference.</li>
-          </ul>
+          <p class="case__label">Dataset &amp; model pipeline</p>
+          <p class="small">100GB of MIMIC-III clinical data (40K+ records), processed through PubMedBERT, ClinicalXLNet, and BigBird transformer models for embeddings and classification.</p>
+          <div class="flow flow--sm">
+            <span class="flow__node">Input</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Embeddings</span><span class="flow__arrow">→</span>
+            <span class="flow__node">FAISS retrieval</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Classifier</span><span class="flow__arrow">→</span>
+            <span class="flow__node">FastAPI</span><span class="flow__arrow">→</span>
+            <span class="flow__node">AWS deployment</span>
+          </div>
+          <p class="case__label">Retrieval &amp; serving</p>
+          <p class="small">FAISS retrieval feeds a PyTorch classifier for readmission risk; a separate GPT-4-backed RAG prototype surfaces actionable clinical insights on top of the prediction, improving decision-making efficiency by ~80%.</p>
+          <p class="case__label">Deployment</p>
+          <p class="small">Full-stack, Dockerized — Angular frontend, FastAPI backend, Firebase auth, AWS S3 for clinical data storage — deployed with HIPAA-compliant handling end-to-end.</p>
+          <p class="case__label">Evaluation &amp; what I built</p>
+          <p class="small">92%+ readmission-risk accuracy at ~2s inference latency. I personally implemented the FAISS retrieval layer, the FastAPI serving path, the Docker/AWS deployment, and the RAG prototype integration.</p>
           <div class="tags">
             <span>PyTorch</span><span>FAISS</span><span>GPT-4 / RAG</span><span>Angular</span><span>FastAPI</span><span>Docker</span><span>AWS S3</span><span>HIPAA</span>
           </div>
@@ -258,7 +351,7 @@
         </article>
       </div>
 
-      <h3 class="subhead">Academic &amp; applied projects</h3>
+      <h3 class="subhead">More projects / academic work</h3>
       <div class="grid grid--three">
         <article class="card card--project card--compact">
           <div class="card__head">
@@ -401,8 +494,15 @@
 
   <section id="skills" class="section section--alt">
     <div class="container reveal">
-      <p class="eyebrow">04 · Skills</p>
+      <p class="eyebrow">05 · Skills</p>
       <h2 class="section__title">Technical skills</h2>
+
+      <p class="case__label">Core strengths</p>
+      <div class="tags tags--core">
+        <span>Python</span><span>GraphQL</span><span>Lambda</span><span>Step Functions</span><span>DynamoDB</span><span>PostgreSQL</span><span>OpenSearch</span><span>Bedrock</span><span>RAG</span><span>Docker</span>
+      </div>
+
+      <h3 class="subhead">Additional tools &amp; technologies</h3>
       <div class="skill-list">
         <div class="skill-row">
           <h3><span class="skill__dot" aria-hidden="true"></span>Languages</h3>
@@ -440,9 +540,39 @@
     </div>
   </section>
 
+  <section id="decisions" class="section">
+    <div class="container reveal">
+      <p class="eyebrow">06 · Engineering Decisions</p>
+      <h2 class="section__title">Selected engineering decisions</h2>
+      <div class="grid grid--two">
+        <div class="card card--decision">
+          <p class="case__label">Why async orchestration instead of extending synchronous timeouts</p>
+          <p class="small">Bumping the AppSync timeout would have masked the real problem — Databricks cold-start latency. Moving to an async resolver flow (DynamoDB job → Streams → Step Functions → GraphQL subscription) fixed the actual bottleneck instead of hiding it behind a longer wait.</p>
+        </div>
+        <div class="card card--decision">
+          <p class="case__label">Why hybrid BM25 + neural retrieval</p>
+          <p class="small">Pure keyword matching (BM25) missed semantic near-matches; pure neural k-NN missed exact terminology matches clinicians expect. Combining both with custom score normalization and tie-breaking gave higher accuracy than either alone.</p>
+        </div>
+        <div class="card card--decision">
+          <p class="case__label">Why DynamoDB for workflow/audit state</p>
+          <p class="small">Audit trails need append-only writes with predictable low-latency reads at scale, not complex relational queries. DynamoDB Global Tables gave full traceability of state changes without the operational overhead of a relational audit schema.</p>
+        </div>
+        <div class="card card--decision">
+          <p class="case__label">Why confidence thresholds and human review</p>
+          <p class="small">In a regulated clinical context, a wrong auto-applied match is worse than a slower one. Confidence-tiered routing auto-applies only high-confidence matches and sends the rest to human review, trading a little speed for accuracy where it matters most.</p>
+        </div>
+        <div class="card card--decision">
+          <p class="case__label">Why versioned states instead of mutable specs</p>
+          <p class="small">Encoding specifications feed downstream regulatory processes — silently overwriting a spec destroys the history of who changed what and when. A draft → publish → promote workflow with versioning makes every change traceable instead of lost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section id="education" class="section">
     <div class="container reveal">
-      <p class="eyebrow">05 · Education &amp; Certification</p>
+      <p class="eyebrow">07 · Education &amp; Certification</p>
       <h2 class="section__title">Education</h2>
       <div class="grid grid--two">
         <div class="card card--org">
@@ -476,7 +606,7 @@
 
   <section id="contact" class="section section--alt">
     <div class="container reveal">
-      <p class="eyebrow">06 · Contact</p>
+      <p class="eyebrow">08 · Contact</p>
       <h2 class="section__title">Let's talk</h2>
       <p class="body contact-lead">Open to Software Engineer, Backend, Data &amp; AI Platform roles. Based in Raleigh, NC — open to remote and relocation.</p>
       <div class="contact">
