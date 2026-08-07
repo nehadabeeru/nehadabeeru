@@ -151,10 +151,12 @@
             </header>
             <p class="case__label">Clinical Encoding Platform</p>
             <ul class="bullets">
-              <li>CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally.</li>
+              <li>CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally on a 3M+ req/day platform.</li>
+              <li>Built AppSync GraphQL APIs with Lambda and VTL resolvers for encoding, approval, audit, and external-partner workflows.</li>
               <li>Built a hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic for auto-coding accuracy.</li>
-              <li>Redesigned long-running AppSync operations as async workflows using DynamoDB Streams, Step Functions, and GraphQL subscriptions after Databricks cold starts exceeded 30 seconds.</li>
+              <li>Redesigned long-running AppSync operations as async workflows using DynamoDB Streams, Step Functions, and GraphQL subscriptions, eliminating AppSync timeouts and cutting Databricks latency from 60s to 2s.</li>
               <li>Built the MuleSoft integration layer connecting internal services to external partner systems, automating manual data corrections.</li>
+              <li>Led end-to-end delivery from requirements and system design through estimation, implementation, UAT, and prod sign-off, with engineering, QA, and stakeholders.</li>
             </ul>
             <div class="flow">
               <span class="flow__step"><span class="flow__node">AppSync</span><span class="flow__arrow" aria-hidden="true">→</span></span>
@@ -168,13 +170,14 @@
 
             <p class="case__label">Specification Management System</p>
             <ul class="bullets">
-              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access.</li>
+              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access, reducing manual handoffs and approval turnaround by 60%.</li>
             </ul>
 
             <p class="case__label">Reliability &amp; Production Engineering</p>
             <ul class="bullets">
               <li>Implemented append-only DynamoDB audit logging with Global Tables replication, tracking user actions and state changes for 2K+ users.</li>
-              <li>Engineered a 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect.</li>
+              <li>Raised backend test coverage to 90%+ with a pytest and moto-based AWS test suite, preventing regression of a production data-integrity defect.</li>
+              <li>Reduced repeat production incidents through on-call triage, root-cause analysis, postmortems, and permanent fixes across APIs, workflows, and data pipelines.</li>
             </ul>
 
             <p class="case__label">Impact</p>
@@ -204,6 +207,7 @@
               </div>
             </header>
             <ul class="bullets">
+              <li>Modernized legacy codebase using AI-assisted refactoring, consolidating duplicate logic into reusable modules and expanding automated test coverage.</li>
               <li>Built checksum-based reconciliation engine to detect schema drift and silent data mismatches across Cards &amp; Payments DB migration.</li>
               <li>Automated cross-database validation (referential integrity, data-type, record-level checks), cutting manual pre-cutover testing.</li>
               <li>Generated structured exception reports and failure summaries, accelerating migration triage, remediation, and prod cutover decisions.</li>
@@ -229,17 +233,43 @@
               </div>
             </header>
             <ul class="bullets">
-              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 60%.</li>
+              <li>Delivered Python backend services integrating trading systems and SQL databases for market and credit-risk data calculations and regulatory reporting.</li>
+              <li>Improved regulatory reporting accuracy to 99.5% with automated reconciliation detecting missing records, balance mismatches, and data-quality issues.</li>
+              <li>Reduced risk-batch latency 40% by parallelizing Python workloads and tuning complex queries, indexes, and database access across high-volume datasets.</li>
               <li>Reduced infrastructure costs 35% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
               <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
               <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
-              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
+              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 80%.</li>
               <li>Strengthened pipeline reliability by making processing steps idempotent and adding checkpointing so failed jobs resume, not restart.</li>
               <li>Wrote unit and integration tests for REST endpoints and SQL transformations, and built CI/CD pipelines in Bitbucket automating build/test/deploy across dev, test, and prod.</li>
               <li>Added request validation, centralized exception handling, and structured logging/metrics for observability; participated in code reviews, sprint planning, and production support.</li>
             </ul>
             <div class="tags">
               <span>Spark</span><span>Event-Driven Pipelines</span><span>REST APIs</span><span>Bitbucket CI/CD</span><span>SQL</span><span>Idempotency</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jul 2017 — Sep 2017</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">RINL</span>
+                <div>
+                  <h3>Software Engineer Intern</h3>
+                  <span class="muted">Rashtriya Ispat Nigam Limited · Andhra Pradesh, India</span>
+                </div>
+              </div>
+            </header>
+            <ul class="bullets">
+              <li>Developed Python services for ERP-integrated workflows, automating validation and processing of 10K+ manufacturing and operational records/day.</li>
+              <li>Created a database-driven web application with reusable business logic and server-side validations, supporting 500+ users across enterprise workflows.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>ERP</span><span>Web Application</span>
             </div>
           </div>
         </li>
