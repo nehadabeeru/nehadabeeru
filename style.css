@@ -149,48 +149,43 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 .body + .body{ margin-top:14px; }
 .muted{ color: var(--muted); }
 
-/* About — corner-popping wave mascots */
-.about-container{ position:relative; }
-.popper{
-  position:absolute; width:50px; height:70px; z-index:2;
-  opacity:0; transform:scale(0);
-  animation: pop-cycle 16s ease-in-out infinite;
+/* About — girl at a desk, left column */
+.about-layout{ display:grid; grid-template-columns: 30% 1fr; gap:36px; align-items:start; }
+.about-desk{ position:sticky; top:110px; }
+.about-desk svg{ width:100%; height:auto; display:block; }
+.about-text{ min-width:0; }
+
+.desk-figure{ animation: desk-bob 3.6s ease-in-out infinite; transform-origin:100px 150px; }
+@keyframes desk-bob{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-3px); }
 }
-.popper svg{ width:100%; height:100%; overflow:visible; }
-.popper--tl{ top:-14px; left:-14px; transform-origin:top left; animation-delay:0s; }
-.popper--tr{ top:-14px; right:-14px; transform-origin:top right; animation-delay:4s; }
-.popper--tr svg{ transform:scaleX(-1); }
-.popper--bl{ bottom:-14px; left:-14px; transform-origin:bottom left; animation-delay:8s; }
-.popper--br{ bottom:-14px; right:-14px; transform-origin:bottom right; animation-delay:12s; }
-.popper--br svg{ transform:scaleX(-1); }
-@keyframes pop-cycle{
-  0%{ opacity:0; transform:scale(0); }
-  2%{ opacity:1; transform:scale(1.18); }
-  5%{ opacity:1; transform:scale(1); }
-  20%{ opacity:1; transform:scale(1); }
-  24%{ opacity:0; transform:scale(0); }
-  100%{ opacity:0; transform:scale(0); }
+.pony{ fill: var(--accent-2); }
+.head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
+.eyes circle{ fill: var(--ink); transform-origin:center; transform-box:fill-box; animation: desk-blink 4.5s ease-in-out infinite; }
+@keyframes desk-blink{
+  0%, 92%, 100%{ transform: scaleY(1); }
+  95%{ transform: scaleY(.12); }
 }
-.popper .pony{ fill: var(--accent-2); }
-.popper .head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
-.popper .smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
-.popper .spine, .popper .leg, .popper .arm-still{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
-.wave-hand{ transform-origin:50px 55px; animation: hand-wave .5s ease-in-out infinite alternate; }
-.wave-hand line{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
-.wave-hand circle{ fill: var(--accent); }
-.popper--tr .wave-hand circle, .popper--br .wave-hand circle{ fill: var(--accent-3); }
-.popper--bl .wave-hand circle{ fill: var(--accent-2); }
-@keyframes hand-wave{ from{ transform: rotate(-18deg); } to{ transform: rotate(24deg); } }
-@media (max-width: 640px){
-  .popper{ width:36px; height:50px; }
-  .popper--tl, .popper--tr{ top:-8px; }
-  .popper--bl, .popper--br{ bottom:-8px; }
-  .popper--tl, .popper--bl{ left:-8px; }
-  .popper--tr, .popper--br{ right:-8px; }
+.smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
+.spine{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
+.table-top{ fill: var(--panel); stroke: var(--ink); stroke-width:1.6; }
+.table-leg{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
+.desk-arms .arm{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; transform-box:fill-box; transform-origin:100px 88px; }
+.desk-arms .arm:first-child{ animation: type-a .6s ease-in-out infinite alternate; }
+.desk-arms .arm:last-child{ animation: type-b .6s ease-in-out infinite alternate; animation-delay:.2s; }
+@keyframes type-a{ from{ transform: rotate(-2deg); } to{ transform: rotate(3deg); } }
+@keyframes type-b{ from{ transform: rotate(2deg); } to{ transform: rotate(-3deg); } }
+.laptop-base{ fill: var(--ink); }
+.laptop-screen{ fill: var(--panel); stroke: var(--ink); stroke-width:1.6; }
+.laptop-glow{ fill: var(--accent); opacity:.6; animation: glow-pulse 1.8s ease-in-out infinite; }
+@keyframes glow-pulse{ 0%,100%{ opacity:.4; } 50%{ opacity:.85; } }
+@media (max-width: 860px){
+  .about-layout{ grid-template-columns: 1fr; }
+  .about-desk{ position:static; width:160px; margin:0 auto 8px; }
 }
 @media (prefers-reduced-motion: reduce){
-  .popper{ animation:none; opacity:0; }
-  .wave-hand{ animation:none; }
+  .desk-figure, .eyes circle, .desk-arms .arm, .laptop-glow{ animation:none; }
 }
 
 .muted-inline{ color: var(--muted); font-weight:400; font-size:.85em; }
