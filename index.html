@@ -116,15 +116,15 @@
 
         <div class="about-text">
           <p class="body">
-          Python Backend Software Engineer with 4+ years of experience building production APIs, event-driven services, and distributed workflows on AWS. Experienced in GraphQL and REST APIs, asynchronous processing with Lambda, Step Functions, EventBridge, and SQS, and reliable persistence with PostgreSQL and DynamoDB.  
+            Python Backend Software Engineer with 4+ years of experience building production APIs, event-driven services, and distributed workflows on AWS. Experienced in GraphQL and REST APIs, asynchronous processing with Lambda, Step Functions, EventBridge, and SQS, and reliable persistence with PostgreSQL and DynamoDB.
           </p>
           <p class="body">
-            Most of my recent work sits at the intersection of distributed systems and applied GenAI. At Merck, I’ve worked on clinical-data platforms that auto-code terms against MedDRA/WHODrug at 99%+ accuracy and GenAI-assisted field mapping that reduced study onboarding from months to about a week. Earlier, at Bank of America, I built backend and migration tooling for financial-risk and Cards & Payments systems, including REST APIs, reconciliation engines, and event-triggered pipelines.
+            Most of my recent work sits at the intersection of distributed systems and applied GenAI. At Merck, I've worked on clinical-data platforms that auto-code terms against MedDRA/WHODrug at 99%+ accuracy and GenAI-assisted field mapping that reduced study onboarding from months to about a week. Earlier, at Bank of America, I built backend and migration tooling for financial-risk and Cards &amp; Payments systems, including REST APIs, reconciliation engines, and event-triggered pipelines.
           </p>
           <p class="body">
-          I’m especially interested in backend systems where reliability and AI meet: async orchestration, retrieval pipelines, state management, idempotency, failure recovery, and turning model output into production-grade workflows.  
+            I'm especially interested in backend systems where reliability and AI meet: async orchestration, retrieval pipelines, state management, idempotency, failure recovery, and turning model output into production-grade workflows.
           </p>
-         </div>
+        </div>
       </div>
     </div>
   </section>
@@ -157,22 +157,94 @@
               <li>Built the MuleSoft integration layer connecting internal services to external partner systems, automating manual data corrections.</li>
             </ul>
             <div class="flow">
-              <span class="flow__node">AppSync</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
-              <span class="flow__node">DynamoDB job</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
-              <span class="flow__node">Streams</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
-              <span class="flow__node">Step Functions</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
-              <span class="flow__node">Databricks/Lambda</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
-              <span class="flow__node">GraphQL subscription</span>
-              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__step"><span class="flow__node">AppSync</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+              <span class="flow__step"><span class="flow__node">DynamoDB job</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+              <span class="flow__step"><span class="flow__node">Streams</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+              <span class="flow__step"><span class="flow__node">Step Functions</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+              <span class="flow__step"><span class="flow__node">Databricks/Lambda</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+              <span class="flow__step"><span class="flow__node">GraphQL subscription</span><span class="flow__arrow" aria-hidden="true">→</span></span>
               <span class="flow__node">UI</span>
             </div>
 
-          
+            <p class="case__label">Specification Management System</p>
+            <ul class="bullets">
+              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access.</li>
+            </ul>
+
+            <p class="case__label">Reliability &amp; Production Engineering</p>
+            <ul class="bullets">
+              <li>Implemented append-only DynamoDB audit logging with Global Tables replication, tracking user actions and state changes for 2K+ users.</li>
+              <li>Engineered a 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect.</li>
+            </ul>
+
+            <p class="case__label">Impact</p>
+            <ul class="bullets">
+              <li>2K+ users across the platform</li>
+              <li>99.52% top-match auto-coding accuracy (98.46% on secondary matches)</li>
+              <li>5–6 hour incremental sync for updated clinical data</li>
+            </ul>
+            <div class="tags">
+              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Step Functions</span><span>Databricks</span><span>MuleSoft</span><span>pytest</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jun 2024 — Aug 2024</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer II <span class="muted-inline">(Contract)</span></h3>
+                  <span class="muted">Bank of America · North Carolina, USA</span>
+                </div>
+              </div>
+            </header>
+            <ul class="bullets">
+              <li>Built checksum-based reconciliation engine to detect schema drift and silent data mismatches across Cards &amp; Payments DB migration.</li>
+              <li>Automated cross-database validation (referential integrity, data-type, record-level checks), cutting manual pre-cutover testing.</li>
+              <li>Generated structured exception reports and failure summaries, accelerating migration triage, remediation, and prod cutover decisions.</li>
+            </ul>
+            <div class="tags">
+              <span>Data Reconciliation</span><span>SQL</span><span>Migration Testing</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jun 2020 — Jan 2023</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer I</h3>
+                  <span class="muted">Bank of America · Tamil Nadu, India</span>
+                </div>
+              </div>
+            </header>
+            <ul class="bullets">
+              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 60%.</li>
+              <li>Reduced infrastructure costs 35% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
+              <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
+              <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
+              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
+              <li>Strengthened pipeline reliability by making processing steps idempotent and adding checkpointing so failed jobs resume, not restart.</li>
+              <li>Wrote unit and integration tests for REST endpoints and SQL transformations, and built CI/CD pipelines in Bitbucket automating build/test/deploy across dev, test, and prod.</li>
+              <li>Added request validation, centralized exception handling, and structured logging/metrics for observability; participated in code reviews, sprint planning, and production support.</li>
+            </ul>
+            <div class="tags">
+              <span>Spark</span><span>Event-Driven Pipelines</span><span>REST APIs</span><span>Bitbucket CI/CD</span><span>SQL</span><span>Idempotency</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <section id="projects" class="section">
@@ -190,19 +262,6 @@
           <p class="case__label">Problem</p>
           <p class="small">Mapping clinical study fields to CDASH standards was a manual, 8–10 week process per study, gating downstream regulatory submission work.</p>
           <p class="case__label">Architecture</p>
-          <div class="flow flow--sm">
-            <span class="flow__node">Input schema</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">pgvector candidate retrieval</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">Claude/OpenAI reranking</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">Confidence score</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">Auto-map / human review</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">Persisted mapping + audit trail</span>
-          </div>
           <p class="small">Multi-model reranking with confidence thresholds means a single model's blind spot or an outage doesn't stall the pipeline — low-confidence or disagreeing results fall back to a second model or a human reviewer instead of silently shipping a wrong mapping.</p>
           <p class="case__label">GenAI design</p>
           <p class="small">pgvector similarity search retrieves candidate CDASH matches; AWS Bedrock (Claude Haiku) reranks to confirm the best match using prompt-engineered comparison logic.</p>
@@ -227,16 +286,11 @@
           <p class="case__label">Dataset &amp; model pipeline</p>
           <p class="small">100GB of MIMIC-III clinical data (40K+ records), processed through PubMedBERT, ClinicalXLNet, and BigBird transformer models for embeddings and classification.</p>
           <div class="flow flow--sm">
-            <span class="flow__node">Clinical record</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">Transformer embedding</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">FAISS retrieval</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">PyTorch classifier</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
-            <span class="flow__node">FastAPI inference API</span>
-            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__step"><span class="flow__node">Clinical record</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+            <span class="flow__step"><span class="flow__node">Transformer embedding</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+            <span class="flow__step"><span class="flow__node">FAISS retrieval</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+            <span class="flow__step"><span class="flow__node">PyTorch classifier</span><span class="flow__arrow" aria-hidden="true">→</span></span>
+            <span class="flow__step"><span class="flow__node">FastAPI inference API</span><span class="flow__arrow" aria-hidden="true">→</span></span>
             <span class="flow__node">AWS deployment</span>
           </div>
           <p class="case__label">Retrieval &amp; serving</p>
