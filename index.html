@@ -74,13 +74,25 @@
   <section id="about" class="section">
     <div class="container reveal">
       <p class="eyebrow">01 · About</p>
-      <p class="body">
-        I build backend and GenAI systems for high-stakes, production environments —
-        serverless APIs on AWS, event-driven pipelines, and retrieval-augmented workflows
-        that hold up under real traffic. Most of my recent work sits at the intersection of
-        distributed systems and applied ML: designing for idempotency and failure recovery,
-        then layering language models on top to do work a human used to do by hand.
-      </p>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="body">
+            Python Backend Software Engineer with 4+ years of experience building production APIs, event-driven services, and distributed data workflows on AWS. Experienced in designing GraphQL and REST APIs, orchestrating asynchronous processing with Lambda, Step Functions, EventBridge, and SQS, and developing reliable persistence layers with PostgreSQL and DynamoDB. Proven track record of resolving production failures, implementing idempotent and retry-safe workflows, and improving system reliability through automated testing, observability, and failure recovery.
+          </p>
+          <p class="body">
+            Most of my recent work sits at the intersection of distributed systems and applied GenAI — at Merck, that means clinical-data pipelines that auto-code encoding terms against MedDRA/WHODrug at 99%+ accuracy, and a Bedrock-backed field-mapping engine that cut study onboarding from months to a week. Earlier, at Bank of America, I built the backend and data-migration tooling behind large-scale financial-risk and Cards &amp; Payments systems — REST APIs, reconciliation engines, and event-triggered pipelines that replaced always-on infrastructure.
+          </p>
+          <p class="body">
+            I care about the parts of engineering that don't show up in a demo: idempotency, retry safety, structured logging, and the kind of test coverage that catches a regression before a customer does.
+          </p>
+        </div>
+        <div class="about-facts">
+          <div class="fact"><span class="fact__num">4+</span><span class="fact__label">years of experience</span></div>
+          <div class="fact"><span class="fact__num">AWS</span><span class="fact__label">Certified Data Engineer</span></div>
+          <div class="fact"><span class="fact__num">M.S.</span><span class="fact__label">Data Analytics, SJSU</span></div>
+          <div class="fact"><span class="fact__num">NC</span><span class="fact__label">Raleigh, open to remote</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -96,8 +108,13 @@
           </div>
           <div class="log__card">
             <header class="log__head">
-              <h3>Software Engineer, Data &amp; AI Platforms</h3>
-              <span class="muted">Merck Sharp &amp; Dohme · New Jersey, USA</span>
+              <div class="log__org">
+                <span class="org-logo">MSD</span>
+                <div>
+                  <h3>Software Engineer, Data &amp; AI Platforms</h3>
+                  <span class="muted">Merck Sharp &amp; Dohme · New Jersey, USA</span>
+                </div>
+              </div>
             </header>
             <ul class="bullets">
               <li>Built hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic, achieving 99.52%/98.46% auto-coding accuracy on MedDRA/WHODrug terms.</li>
@@ -106,9 +123,12 @@
               <li>Designed GraphQL API layer replacing rate-limited REST backend, supporting 20+ concurrent sessions with sub-second response times.</li>
               <li>Developed real-time Mulesoft integration layer connecting internal services to external systems, automating manual data corrections.</li>
               <li>Engineered 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity fix.</li>
+              <li>Led the Specification Management System end-to-end — a web application replacing a manual, error-prone Excel-based workflow for managing encoding specifications across clinical trials; owned requirements gathering, UI design, and demos to business leads, technical architects, and encoding specialists.</li>
+              <li>Introduced a structured draft → publish → promote workflow with versioning, audit trails, and role-based access, bringing rigor to a process that previously relied on spreadsheets and manual handoffs between teams.</li>
+              <li>Navigated shifting requirements as the customer's organizational model evolved — proposed architectural improvements like eliminating redundant file storage by sending raw data instead of Excel exports, and advocated for clean separation of concerns in approval workflows.</li>
             </ul>
             <div class="tags">
-              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Databricks</span><span>Mulesoft</span><span>pytest</span>
+              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Databricks</span><span>Mulesoft</span><span>pytest</span><span>Product Ownership</span>
             </div>
           </div>
         </li>
@@ -119,8 +139,13 @@
           </div>
           <div class="log__card">
             <header class="log__head">
-              <h3>Software Engineer II <span class="muted-inline">(Contract)</span></h3>
-              <span class="muted">Bank of America · North Carolina, USA</span>
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer II <span class="muted-inline">(Contract)</span></h3>
+                  <span class="muted">Bank of America · North Carolina, USA</span>
+                </div>
+              </div>
             </header>
             <ul class="bullets">
               <li>Built checksum-based reconciliation engine to detect schema drift and silent data mismatches across Cards &amp; Payments DB migration.</li>
@@ -139,18 +164,26 @@
           </div>
           <div class="log__card">
             <header class="log__head">
-              <h3>Software Engineer I</h3>
-              <span class="muted">Bank of America · Tamil Nadu, India</span>
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer I</h3>
+                  <span class="muted">Bank of America · Tamil Nadu, India</span>
+                </div>
+              </div>
             </header>
             <ul class="bullets">
               <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 30%.</li>
               <li>Reduced infrastructure costs 30% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
-              <li>Developed reusable data-access components abstracting connection and query logic across database systems, eliminating duplicated integration code for downstream teams.</li>
-              <li>Created rule-based translation engine parsing legacy SQL syntax and converting to target dialect, reducing manual effort by 70–80%.</li>
+              <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
+              <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
+              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
               <li>Strengthened pipeline reliability by making processing steps idempotent and adding checkpointing so failed jobs resume, not restart.</li>
+              <li>Wrote unit and integration tests for REST endpoints and SQL transformations, and built CI/CD pipelines in Bitbucket automating build/test/deploy across dev, test, and prod.</li>
+              <li>Added request validation, centralized exception handling, and structured logging/metrics for observability; participated in code reviews, sprint planning, and production support.</li>
             </ul>
             <div class="tags">
-              <span>Spark</span><span>Event-Driven Pipelines</span><span>SQL</span><span>Idempotency</span>
+              <span>Spark</span><span>Event-Driven Pipelines</span><span>REST APIs</span><span>Bitbucket CI/CD</span><span>SQL</span><span>Idempotency</span>
             </div>
           </div>
         </li>
@@ -199,6 +232,7 @@
           <div class="row">
             <a class="link" href="https://devpost.com/software/medpredict-hospital-readmission-prediction-model" target="_blank" rel="noopener">Devpost</a>
             <a class="link" href="https://www.youtube.com/watch?v=6ZcuRE0I8I0" target="_blank" rel="noopener">▶ Demo video</a>
+            <a class="link" href="https://github.com/nehadabeeru/MedPredict" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
       </div>
@@ -219,6 +253,9 @@
           <div class="tags">
             <span>XGBoost</span><span>Random Forest</span><span>K-Means</span>
           </div>
+          <div class="row">
+            <a class="link" href="https://github.com/nehadabeeru/MSDA/tree/main/DATA-240" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </article>
 
         <article class="card card--project card--compact">
@@ -236,6 +273,7 @@
           </div>
           <div class="row">
             <a class="link" href="https://devpost.com/software/tourbot" target="_blank" rel="noopener">Devpost</a>
+            <a class="link" href="https://github.com/nehadabeeru/MSDA/tree/main/Tourbot" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
 
@@ -283,6 +321,9 @@
           <div class="tags">
             <span>AWS</span><span>Kafka</span><span>PySpark</span><span>React</span>
           </div>
+          <div class="row">
+            <a class="link" href="https://github.com/nehadabeeru/MSDA/tree/main/Bigdata" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </article>
 
         <article class="card card--project card--compact">
@@ -315,6 +356,22 @@
           </div>
           <div class="row">
             <a class="link" href="https://www.ijitee.org/wp-content/uploads/papers/v9i9/I7642079920.pdf" target="_blank" rel="noopener">Published paper</a>
+          </div>
+        </article>
+
+        <article class="card card--project card--compact">
+          <div class="card__head">
+            <h3>Twitter Sentiment Analysis</h3>
+          </div>
+          <p class="muted small">ML-based sentiment classification · San José State University</p>
+          <ul class="bullets small">
+            <li>Built a machine learning pipeline to classify sentiment in Twitter data.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>Machine Learning</span><span>NLP</span>
+          </div>
+          <div class="row">
+            <a class="link" href="https://github.com/nehadabeeru/MSDA/tree/main/TwitterSentimentAnalysis_ML-main" target="_blank" rel="noopener">GitHub</a>
           </div>
         </article>
       </div>
@@ -367,14 +424,16 @@
       <p class="eyebrow">05 · Education &amp; Certification</p>
       <h2 class="section__title">Education</h2>
       <div class="grid grid--two">
-        <div class="card">
+        <div class="card card--org">
+          <span class="org-logo org-logo--lg">SJSU</span>
           <div class="card__body">
             <h3>M.S., Data Analytics</h3>
             <p class="muted">San José State University, California</p>
             <p class="small">Jan 2023 – Dec 2024</p>
           </div>
         </div>
-        <div class="card">
+        <div class="card card--org">
+          <span class="org-logo org-logo--lg">SRM</span>
           <div class="card__body">
             <h3>B.E., Computer Science and Engineering</h3>
             <p class="muted">SRM University, India</p>
