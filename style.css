@@ -145,44 +145,50 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 .section--alt{ background: var(--bg-soft); }
 .section__title{ font-size: clamp(26px, 3.2vw, 32px); margin:0 0 28px; font-weight:700; }
 
-.body{ color: var(--ink); max-width: 68ch; }
+.body{ color: var(--ink); }
 .body + .body{ margin-top:14px; }
 .muted{ color: var(--muted); }
 
-/* About — walking figure strip */
-.walk-strip{
-  position:relative; width:100%; height:120px; overflow:hidden;
-  margin-top:32px;
+/* About — corner-popping wave mascots */
+.about-container{ position:relative; }
+.popper{
+  position:absolute; width:56px; height:56px; z-index:2;
+  opacity:0; transform:scale(0);
+  animation: pop-cycle 16s ease-in-out infinite;
 }
-.walker{ position:absolute; top:0; width:64px; height:120px; left:-12%; animation: walk-across 15s linear infinite; }
-@keyframes walk-across{
-  from{ left:-12%; }
-  to{ left:112%; }
+.popper svg{ width:100%; height:100%; overflow:visible; }
+.popper--tl{ top:-14px; left:-14px; transform-origin:top left; animation-delay:0s; }
+.popper--tr{ top:-14px; right:-14px; transform-origin:top right; animation-delay:4s; }
+.popper--tr svg{ transform:scaleX(-1); }
+.popper--bl{ bottom:-14px; left:-14px; transform-origin:bottom left; animation-delay:8s; }
+.popper--br{ bottom:-14px; right:-14px; transform-origin:bottom right; animation-delay:12s; }
+.popper--br svg{ transform:scaleX(-1); }
+@keyframes pop-cycle{
+  0%{ opacity:0; transform:scale(0); }
+  2%{ opacity:1; transform:scale(1.18); }
+  5%{ opacity:1; transform:scale(1); }
+  20%{ opacity:1; transform:scale(1); }
+  24%{ opacity:0; transform:scale(0); }
+  100%{ opacity:0; transform:scale(0); }
 }
-.walker-shadow{ fill: var(--ink); opacity:.08; }
-.walker-figure{ animation: walker-bob .3s ease-in-out infinite alternate; transform-origin:100px 100px; }
-@keyframes walker-bob{
-  from{ transform: translateY(0); }
-  to{ transform: translateY(-3px); }
-}
-.pony{ fill: var(--accent-2); }
-.head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
-.smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
-.spine{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
-.limb line{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
-.leg-a{ transform-origin:100px 120px; animation: swing .3s ease-in-out infinite alternate; }
-.leg-b{ transform-origin:100px 120px; animation: swing-rev .3s ease-in-out infinite alternate; }
-.arm-a{ transform-origin:100px 80px; animation: swing-rev .3s ease-in-out infinite alternate; }
-.arm-b{ transform-origin:100px 80px; animation: swing .3s ease-in-out infinite alternate; }
-@keyframes swing{ from{ transform: rotate(-22deg); } to{ transform: rotate(22deg); } }
-@keyframes swing-rev{ from{ transform: rotate(22deg); } to{ transform: rotate(-22deg); } }
+.popper .pony{ fill: var(--accent-2); }
+.popper .head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
+.popper .smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
+.wave-hand{ transform-origin:64px 30px; animation: hand-wave .5s ease-in-out infinite alternate; }
+.wave-hand circle{ fill: var(--accent); }
+.popper--tr .wave-hand circle, .popper--br .wave-hand circle{ fill: var(--accent-3); }
+.popper--bl .wave-hand circle{ fill: var(--accent-2); }
+@keyframes hand-wave{ from{ transform: rotate(-18deg); } to{ transform: rotate(24deg); } }
 @media (max-width: 640px){
-  .walk-strip{ height:90px; }
-  .walker{ width:48px; height:90px; }
+  .popper{ width:42px; height:42px; }
+  .popper--tl, .popper--tr{ top:-8px; }
+  .popper--bl, .popper--br{ bottom:-8px; }
+  .popper--tl, .popper--bl{ left:-8px; }
+  .popper--tr, .popper--br{ right:-8px; }
 }
 @media (prefers-reduced-motion: reduce){
-  .walker{ animation:none; left:6%; }
-  .walker-figure, .leg-a, .leg-b, .arm-a, .arm-b{ animation:none; }
+  .popper{ animation:none; opacity:0; }
+  .wave-hand{ animation:none; }
 }
 
 .muted-inline{ color: var(--muted); font-weight:400; font-size:.85em; }
