@@ -62,8 +62,6 @@
             <div><dt>Location</dt><dd>Raleigh, NC</dd></div>
             <div><dt>Experience</dt><dd>4+ yrs</dd></div>
             <div><dt>Certified</dt><dd>AWS · Data Engineer</dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:nehadabeeru@outlook.com">nehadabeeru@outlook.com</a></dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+12403860822">+1 (240) 386-0822</a></dd></div>
           </dl>
         </div>
       </aside>
@@ -73,23 +71,51 @@
   <section id="about" class="section">
     <div class="container reveal">
       <p class="eyebrow">01 · About</p>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p class="body">
+      <div class="about-story">
+        <div class="about-story__figure" aria-hidden="true">
+          <svg class="figure-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle class="sparkle sparkle--a" cx="34" cy="46" r="3.5"></circle>
+            <circle class="sparkle sparkle--b" cx="168" cy="70" r="3"></circle>
+            <circle class="sparkle sparkle--c" cx="150" cy="150" r="3.5"></circle>
+            <circle class="sparkle sparkle--d" cx="28" cy="140" r="2.5"></circle>
+
+            <g class="figure">
+              <path class="pony" d="M110 40 Q128 34 126 54 Q124 66 112 60 Z"></path>
+              <circle class="head" cx="100" cy="50" r="15"></circle>
+              <g class="eyes">
+                <circle cx="94" cy="49" r="1.8"></circle>
+                <circle cx="106" cy="49" r="1.8"></circle>
+              </g>
+              <path class="smile" d="M94 56 Q100 60 106 56"></path>
+
+              <line class="spine" x1="100" y1="65" x2="100" y2="118"></line>
+
+              <path class="legs" d="M100 118 Q78 128 76 150 M100 118 Q122 128 124 150"></path>
+
+              <g class="arm arm--left">
+                <line x1="100" y1="80" x2="82" y2="106"></line>
+              </g>
+              <g class="arm arm--right">
+                <line x1="100" y1="80" x2="118" y2="106"></line>
+              </g>
+
+              <rect class="laptop-base" x="74" y="106" width="52" height="7" rx="2"></rect>
+              <path class="laptop-screen" d="M78 106 L82 82 L118 82 L122 106 Z"></path>
+              <rect class="laptop-glow" x="90" y="88" width="20" height="12" rx="1"></rect>
+            </g>
+          </svg>
+        </div>
+
+        <div class="about-story__text">
+          <p class="story-line story-line--lead">
             Python Backend Software Engineer with 4+ years of experience building production APIs, event-driven services, and distributed data workflows on AWS. Experienced in designing GraphQL and REST APIs, orchestrating asynchronous processing with Lambda, Step Functions, EventBridge, and SQS, and developing reliable persistence layers with PostgreSQL and DynamoDB. Proven track record of resolving production failures, implementing idempotent and retry-safe workflows, and improving system reliability through automated testing, observability, and failure recovery.
           </p>
-          <p class="body">
+          <p class="story-line">
             Most of my recent work sits at the intersection of distributed systems and applied GenAI — at Merck, that means clinical-data pipelines that auto-code encoding terms against MedDRA/WHODrug at 99%+ accuracy, and a Bedrock-backed field-mapping engine that cut study onboarding from months to a week. Earlier, at Bank of America, I built the backend and data-migration tooling behind large-scale financial-risk and Cards &amp; Payments systems — REST APIs, reconciliation engines, and event-triggered pipelines that replaced always-on infrastructure.
           </p>
-          <p class="body">
+          <p class="story-line">
             I care about the parts of engineering that don't show up in a demo: idempotency, retry safety, structured logging, and the kind of test coverage that catches a regression before a customer does.
           </p>
-        </div>
-        <div class="about-facts">
-          <div class="fact"><span class="fact__num">4+</span><span class="fact__label">years of experience</span></div>
-          <div class="fact"><span class="fact__num">AWS</span><span class="fact__label">Certified Data Engineer</span></div>
-          <div class="fact"><span class="fact__num">M.S.</span><span class="fact__label">Data Analytics, SJSU</span></div>
-          <div class="fact"><span class="fact__num">NC</span><span class="fact__label">Raleigh, open to remote</span></div>
         </div>
       </div>
     </div>
@@ -220,13 +246,15 @@
             <h3>MedPredict</h3>
             <span class="chip chip--live">shipped</span>
           </div>
-          <p class="muted small">Hospital readmission prediction platform</p>
+          <p class="muted small">Hospital readmission prediction system with LLMs</p>
           <ul class="bullets small">
-            <li>Built end-to-end ML pipeline (transformer embeddings, FAISS retrieval, PyTorch classification) trained on 40K+ MIMIC-III records, achieving 92%+ readmission risk accuracy.</li>
-            <li>Reduced inference latency to 2s by deploying real-time prediction API (FastAPI, Docker, AWS EC2/S3) with async handling and model-serving optimizations.</li>
+            <li>Built an end-to-end readmission-risk pipeline combining PubMedBERT, ClinicalXLNet, and BigBird transformer models with FAISS retrieval and PyTorch classification, trained on 100GB of MIMIC-III clinical data (40K+ records), achieving 92%+ accuracy.</li>
+            <li>Built an interactive RAG (Retrieval-Augmented Generation) prototype using the GPT-4 API to surface actionable clinical insights, improving decision-making efficiency by ~80%.</li>
+            <li>Shipped a full-stack, Dockerized application — Angular frontend, FastAPI backend, Firebase authentication, and AWS S3 for large-scale clinical data storage — with real-time inference at ~2s latency.</li>
+            <li>Designed for HIPAA-compliant handling of sensitive clinical data end-to-end, from ingestion through inference.</li>
           </ul>
           <div class="tags">
-            <span>PyTorch</span><span>FAISS</span><span>FastAPI</span><span>Docker</span>
+            <span>PyTorch</span><span>FAISS</span><span>GPT-4 / RAG</span><span>Angular</span><span>FastAPI</span><span>Docker</span><span>AWS S3</span><span>HIPAA</span>
           </div>
           <div class="row">
             <a class="link" href="https://devpost.com/software/medpredict-hospital-readmission-prediction-model" target="_blank" rel="noopener">Devpost</a>

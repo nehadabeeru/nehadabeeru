@@ -60,6 +60,11 @@ document.querySelectorAll('.skill-list').forEach(list => {
     el.style.setProperty('--i', i);
   });
 });
+document.querySelectorAll('.about-story__text').forEach(list => {
+  Array.from(list.children).forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
+});
 
 // Gentle mouse parallax on hero blobs
 const blobs = document.querySelectorAll('.blob');
