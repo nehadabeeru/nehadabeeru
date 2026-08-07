@@ -152,7 +152,7 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 /* About — corner-popping wave mascots */
 .about-container{ position:relative; }
 .popper{
-  position:absolute; width:56px; height:56px; z-index:2;
+  position:absolute; width:50px; height:70px; z-index:2;
   opacity:0; transform:scale(0);
   animation: pop-cycle 16s ease-in-out infinite;
 }
@@ -174,13 +174,15 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 .popper .pony{ fill: var(--accent-2); }
 .popper .head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
 .popper .smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
-.wave-hand{ transform-origin:64px 30px; animation: hand-wave .5s ease-in-out infinite alternate; }
+.popper .spine, .popper .leg, .popper .arm-still{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
+.wave-hand{ transform-origin:50px 55px; animation: hand-wave .5s ease-in-out infinite alternate; }
+.wave-hand line{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
 .wave-hand circle{ fill: var(--accent); }
 .popper--tr .wave-hand circle, .popper--br .wave-hand circle{ fill: var(--accent-3); }
 .popper--bl .wave-hand circle{ fill: var(--accent-2); }
 @keyframes hand-wave{ from{ transform: rotate(-18deg); } to{ transform: rotate(24deg); } }
 @media (max-width: 640px){
-  .popper{ width:42px; height:42px; }
+  .popper{ width:36px; height:50px; }
   .popper--tl, .popper--tr{ top:-8px; }
   .popper--bl, .popper--br{ bottom:-8px; }
   .popper--tl, .popper--bl{ left:-8px; }
