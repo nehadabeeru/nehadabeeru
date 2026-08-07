@@ -18,36 +18,276 @@
   <meta name="twitter:title" content="Neha Dabeeru — Software Engineer" />
   <meta name="twitter:description" content="Backend & GenAI Platforms Engineer. AWS Certified Data Engineer — Associate." />
   <meta name="twitter:image" content="https://nehadabeeru.github.io/nehadabeeru/og-image.png" />
-  <script>document.documentElement.classList.add('js');</script>
   <link href="style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="nav" role="navigation" aria-label="Primary">
     <div class="container nav__inner">
       <a href="#top" class="brand">Neha Dabeeru</a>
-      <nav class="nav__links" id="primary-nav">
+      <nav class="nav__links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#spec-system">Case Study</a>
-<a href="#projects">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn btn--sm btn--ghost nav__resume" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume ↓</a>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <a class="btn btn--sm btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="main-content">
-<section id="projects" class="section">
+  <main id="top" class="hero">
+    <div class="blob blob--one" aria-hidden="true"></div>
+    <div class="blob blob--two" aria-hidden="true"></div>
+    <div class="blob blob--three" aria-hidden="true"></div>
+
+    <div class="container hero__inner reveal">
+      <div class="hero__copy">
+        <p class="script-tag">hi, i'm</p>
+        <h1 class="hero__title">Neha <span class="grad-text">Dabeeru</span></h1>
+        <p class="role-tag">Software Engineer · Backend &amp; GenAI Platforms</p>
+        <p class="lead">
+          Python backend engineer building production APIs, distributed workflows, and
+          GenAI platforms on AWS, with a focus on GraphQL, event-driven systems,
+          retrieval, and reliability.
+        </p>
+        <div class="actions">
+          <a class="btn" href="mailto:nehadabeeru@outlook.com">Get in touch</a>
+          <a class="btn btn--ghost" href="nehadabeeru.pdf" target="_blank" rel="noopener">Resume ↓</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/nehadabeeru/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/nehadabeeru" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="hero__status" aria-label="Availability status">
+        <div class="badge-card">
+          <div class="badge-card__head">
+            <span class="dot" aria-hidden="true"></span>
+            <span>open to opportunities</span>
+          </div>
+          <dl class="badge-card__list">
+            <div><dt>Location</dt><dd>Raleigh, NC</dd></div>
+            <div><dt>Experience</dt><dd>4+ yrs</dd></div>
+            <div><dt>Certified</dt><dd>AWS · Data Engineer</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <section id="about" class="section">
+    <div class="container reveal">
+      <p class="eyebrow">01 · About</p>
+      <div class="about-layout">
+        <div class="about-desk" aria-hidden="true">
+          <svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
+            <g class="desk-figure">
+              <path class="pony" d="M110 42 Q126 36 124 54 Q123 65 112 60 Z"></path>
+              <circle class="head" cx="100" cy="55" r="16"></circle>
+              <g class="eyes">
+                <circle cx="94" cy="54" r="1.8"></circle>
+                <circle cx="106" cy="54" r="1.8"></circle>
+              </g>
+              <path class="smile" d="M94 61 Q100 65 106 61"></path>
+              <line class="spine" x1="100" y1="71" x2="100" y2="150"></line>
+            </g>
+
+            <rect class="table-top" x="34" y="150" width="132" height="8" rx="2"></rect>
+            <line class="table-leg" x1="46" y1="158" x2="46" y2="205"></line>
+            <line class="table-leg" x1="154" y1="158" x2="154" y2="205"></line>
+
+            <g class="desk-arms">
+              <line class="arm" x1="100" y1="88" x2="84" y2="128"></line>
+              <line class="arm" x1="100" y1="88" x2="116" y2="128"></line>
+            </g>
+
+            <rect class="laptop-base" x="76" y="142" width="48" height="7" rx="2"></rect>
+            <path class="laptop-screen" d="M80 142 L84 118 L116 118 L120 142 Z"></path>
+            <rect class="laptop-glow" x="90" y="122" width="20" height="12" rx="1"></rect>
+          </svg>
+        </div>
+
+        <div class="about-text">
+          <p class="body">
+            Python Backend Software Engineer with 4+ years of experience building production APIs, event-driven services, and distributed data workflows on AWS. Experienced in designing GraphQL and REST APIs, orchestrating asynchronous processing with Lambda, Step Functions, EventBridge, and SQS, and developing reliable persistence layers with PostgreSQL and DynamoDB. Proven track record of resolving production failures, implementing idempotent and retry-safe workflows, and improving system reliability through automated testing, observability, and failure recovery.
+          </p>
+          <p class="body">
+            Most of my recent work sits at the intersection of distributed systems and applied GenAI — at Merck, that means clinical-data pipelines that auto-code encoding terms against MedDRA/WHODrug at 99%+ accuracy, and a Bedrock-backed field-mapping engine that cut study onboarding from months to a week. Earlier, at Bank of America, I built the backend and data-migration tooling behind large-scale financial-risk and Cards &amp; Payments systems — REST APIs, reconciliation engines, and event-triggered pipelines that replaced always-on infrastructure.
+          </p>
+          <p class="body">
+            I care about the parts of engineering that don't show up in a demo: idempotency, retry safety, structured logging, and the kind of test coverage that catches a regression before a customer does.
+          </p>
+          <p class="body">
+            I'm most interested in systems where backend reliability and AI meet: async orchestration, retrieval pipelines, state management, failure recovery, and turning model output into production-grade workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section section--alt">
+    <div class="container reveal">
+      <p class="eyebrow">02 · Experience</p>
+      <h2 class="section__title">Where I've worked</h2>
+
+      <ol class="log">
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jan 2025 — Present</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">MSD</span>
+                <div>
+                  <h3>Software Engineer, Data &amp; AI Platforms</h3>
+                  <span class="muted">Merck Sharp &amp; Dohme · New Jersey, USA</span>
+                </div>
+              </div>
+            </header>
+            <p class="case__label">Clinical Encoding Platform</p>
+            <ul class="bullets">
+              <li>CDL (Encoding Engine) is Merck's clinical data management platform, used to standardize verbatim terms into MedDRA/WHODrug codes across clinical trials for 2K+ users globally.</li>
+              <li>Built a hybrid BM25 + neural k-NN scoring algorithm with custom normalization, weighted combination, and tie-breaking logic for auto-coding accuracy.</li>
+              <li>Redesigned long-running AppSync operations as async workflows using DynamoDB Streams, Step Functions, and GraphQL subscriptions after Databricks cold starts exceeded 30 seconds.</li>
+              <li>Built the MuleSoft integration layer connecting internal services to external partner systems, automating manual data corrections.</li>
+            </ul>
+            <div class="flow">
+              <span class="flow__node">AppSync</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">DynamoDB job</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">Streams</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">Step Functions</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">Databricks/Lambda</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">GraphQL subscription</span>
+              <span class="flow__arrow" aria-hidden="true">→</span>
+              <span class="flow__node">UI</span>
+            </div>
+
+            <p class="case__label">Specification Management System</p>
+            <ul class="bullets">
+              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access. <a class="link" href="#spec-system">Full case study ↓</a></li>
+            </ul>
+
+            <p class="case__label">Reliability &amp; Production Engineering</p>
+            <ul class="bullets">
+              <li>Implemented append-only DynamoDB audit logging with Global Tables replication, tracking user actions and state changes for 2K+ users.</li>
+              <li>Engineered a 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect.</li>
+            </ul>
+
+            <p class="case__label">Impact</p>
+            <ul class="bullets">
+              <li>2K+ users across the platform</li>
+              <li>99.52% top-match auto-coding accuracy (98.46% on secondary matches)</li>
+              <li>5–6 hour incremental sync for updated clinical data</li>
+            </ul>
+            <div class="tags">
+              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Step Functions</span><span>Databricks</span><span>MuleSoft</span><span>pytest</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jun 2024 — Aug 2024</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer II <span class="muted-inline">(Contract)</span></h3>
+                  <span class="muted">Bank of America · North Carolina, USA</span>
+                </div>
+              </div>
+            </header>
+            <ul class="bullets">
+              <li>Built checksum-based reconciliation engine to detect schema drift and silent data mismatches across Cards &amp; Payments DB migration.</li>
+              <li>Automated cross-database validation (referential integrity, data-type, record-level checks), cutting manual pre-cutover testing.</li>
+              <li>Generated structured exception reports and failure summaries, accelerating migration triage, remediation, and prod cutover decisions.</li>
+            </ul>
+            <div class="tags">
+              <span>Data Reconciliation</span><span>SQL</span><span>Migration Testing</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="log__entry">
+          <div class="log__meta">
+            <span class="log__date">Jun 2020 — Jan 2023</span>
+          </div>
+          <div class="log__card">
+            <header class="log__head">
+              <div class="log__org">
+                <span class="org-logo">BoA</span>
+                <div>
+                  <h3>Software Engineer I</h3>
+                  <span class="muted">Bank of America · Tamil Nadu, India</span>
+                </div>
+              </div>
+            </header>
+            <ul class="bullets">
+              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 60%.</li>
+              <li>Reduced infrastructure costs 35% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
+              <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
+              <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
+              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
+              <li>Strengthened pipeline reliability by making processing steps idempotent and adding checkpointing so failed jobs resume, not restart.</li>
+              <li>Wrote unit and integration tests for REST endpoints and SQL transformations, and built CI/CD pipelines in Bitbucket automating build/test/deploy across dev, test, and prod.</li>
+              <li>Added request validation, centralized exception handling, and structured logging/metrics for observability; participated in code reviews, sprint planning, and production support.</li>
+            </ul>
+            <div class="tags">
+              <span>Spark</span><span>Event-Driven Pipelines</span><span>REST APIs</span><span>Bitbucket CI/CD</span><span>SQL</span><span>Idempotency</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="spec-system" class="section section--alt">
+    <div class="container reveal">
+      <p class="eyebrow">03 · Case Study</p>
+      <h2 class="section__title">Specification Management System</h2>
+      <p class="muted small" style="margin-bottom:24px;">Merck Sharp &amp; Dohme · Jan 2025 – Present</p>
+
+      <div class="case-grid">
+        <div class="case-block">
+          <p class="case__label">Problem</p>
+          <p class="body">Encoding specifications for clinical trials were managed through Excel and manual handoffs between business leads, technical architects, and encoding specialists — slow, error-prone, and impossible to audit.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">My role</p>
+          <p class="body">Requirements gathering, architecture, implementation, UI design, and stakeholder demos — owned the product end-to-end from the first conversation with business leads through production rollout.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">Architecture &amp; features</p>
+          <p class="body">Draft → Publish → Promote workflow with role-based access control, full audit history, versioning, and explicit approval states replacing ad-hoc spreadsheet edits.</p>
+        </div>
+        <div class="case-block">
+          <p class="case__label">Engineering decisions</p>
+          <p class="body">Avoided redundant file storage by sending raw data instead of Excel exports; separated approval concerns into distinct workflow states; kept scope manageable as requirements shifted with the customer's evolving organizational model.</p>
+        </div>
+      </div>
+
+      <p class="case__label" style="margin-top:8px;">Impact</p>
+      <p class="body">Replaced a fully manual, spreadsheet-based workflow with a governed application — bringing versioning, audit trails, and role-based access to a process that previously had none.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
     <div class="container reveal">
       <p class="eyebrow">04 · Projects</p>
       <h2 class="section__title">Selected engineering projects</h2>
@@ -63,14 +303,19 @@
           <p class="small">Mapping clinical study fields to CDASH standards was a manual, 8–10 week process per study, gating downstream regulatory submission work.</p>
           <p class="case__label">Architecture</p>
           <div class="flow flow--sm">
-            <span class="flow__node">Input schema</span><span class="flow__arrow">→</span>
-            <span class="flow__node">pgvector candidate retrieval</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Claude/OpenAI reranking</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Confidence score</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Auto-map / human review</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Input schema</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">pgvector candidate retrieval</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">Claude/OpenAI reranking</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">Confidence score</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">Auto-map / human review</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
             <span class="flow__node">Persisted mapping + audit trail</span>
           </div>
-          <p class="small">Multi-model reranking combines model agreement with confidence thresholds; low-confidence or conflicting results fall back to a secondary model or human review instead of being automatically applied.</p>
+          <p class="small">Multi-model reranking with confidence thresholds means a single model's blind spot or an outage doesn't stall the pipeline — low-confidence or disagreeing results fall back to a second model or a human reviewer instead of silently shipping a wrong mapping.</p>
           <p class="case__label">GenAI design</p>
           <p class="small">pgvector similarity search retrieves candidate CDASH matches; AWS Bedrock (Claude Haiku) reranks to confirm the best match using prompt-engineered comparison logic.</p>
           <p class="case__label">Backend &amp; safety</p>
@@ -94,21 +339,26 @@
           <p class="case__label">Dataset &amp; model pipeline</p>
           <p class="small">100GB of MIMIC-III clinical data (40K+ records), processed through PubMedBERT, ClinicalXLNet, and BigBird transformer models for embeddings and classification.</p>
           <div class="flow flow--sm">
-            <span class="flow__node">Clinical record</span><span class="flow__arrow">→</span>
-            <span class="flow__node">Transformer embedding</span><span class="flow__arrow">→</span>
-            <span class="flow__node">FAISS retrieval</span><span class="flow__arrow">→</span>
-            <span class="flow__node">PyTorch classifier</span><span class="flow__arrow">→</span>
-            <span class="flow__node">FastAPI inference API</span><span class="flow__arrow">→</span>
+            <span class="flow__node">Clinical record</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">Transformer embedding</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">FAISS retrieval</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">PyTorch classifier</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
+            <span class="flow__node">FastAPI inference API</span>
+            <span class="flow__arrow" aria-hidden="true">→</span>
             <span class="flow__node">AWS deployment</span>
           </div>
           <p class="case__label">Retrieval &amp; serving</p>
           <p class="small">FAISS retrieval feeds a PyTorch classifier for readmission risk; a separate GPT-4-backed RAG prototype surfaces actionable clinical insights on top of the prediction, improving decision-making efficiency by ~80%.</p>
           <p class="case__label">Deployment</p>
-          <p class="small">Full-stack, Dockerized — Angular frontend, FastAPI backend, Firebase auth, and AWS S3 for clinical data storage — designed with HIPAA-aligned data-handling practices for sensitive clinical data.</p>
+          <p class="small">Full-stack, Dockerized — Angular frontend, FastAPI backend, Firebase auth, AWS S3 for clinical data storage — deployed with HIPAA-compliant handling end-to-end.</p>
           <p class="case__label">Evaluation &amp; what I built</p>
           <p class="small">92%+ readmission-risk accuracy at ~2s inference latency. I personally implemented the FAISS retrieval layer, the FastAPI serving path, the Docker/AWS deployment, and the RAG prototype integration.</p>
           <div class="tags">
-            <span>PyTorch</span><span>FAISS</span><span>GPT-4 / RAG</span><span>Angular</span><span>FastAPI</span><span>Docker</span><span>AWS S3</span><span>Healthcare Data</span>
+            <span>PyTorch</span><span>FAISS</span><span>GPT-4 / RAG</span><span>Angular</span><span>FastAPI</span><span>Docker</span><span>AWS S3</span><span>HIPAA</span>
           </div>
           <div class="row">
             <a class="link" href="https://devpost.com/software/medpredict-hospital-readmission-prediction-model" target="_blank" rel="noopener">Devpost</a>
@@ -344,7 +594,7 @@
 
   <section id="contact" class="section section--alt">
     <div class="container reveal">
-      <p class="eyebrow">08 · Contact</p>
+      <p class="eyebrow">07 · Contact</p>
       <h2 class="section__title">Let's talk</h2>
       <p class="body contact-lead">Open to Software Engineer, Backend, Data &amp; AI Platform roles. Based in Raleigh, NC — open to remote and relocation.</p>
       <div class="contact">
@@ -355,8 +605,6 @@
       </div>
     </div>
   </section>
-
-  </main>
 
   <footer class="footer">
     <div class="container footer__inner">
