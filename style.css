@@ -149,73 +149,42 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 .body + .body{ margin-top:14px; }
 .muted{ color: var(--muted); }
 
-/* About — story layout */
-.about-story{ display:grid; grid-template-columns: 200px 1fr; gap:44px; align-items:start; }
-.about-story__figure{ position:sticky; top:110px; display:flex; justify-content:center; }
-.figure-svg{ width:180px; height:180px; }
-.figure{ transform-origin: 100px 100px; animation: figure-bob 4s ease-in-out infinite; }
-@keyframes figure-bob{
-  0%, 100%{ transform: translateY(0); }
-  50%{ transform: translateY(-6px); }
+/* About — walking figure strip */
+.walk-strip{
+  position:relative; width:100%; height:120px; overflow:hidden;
+  margin-top:32px;
+}
+.walker{ position:absolute; top:0; width:64px; height:120px; left:-12%; animation: walk-across 15s linear infinite; }
+@keyframes walk-across{
+  from{ left:-12%; }
+  to{ left:112%; }
+}
+.walker-shadow{ fill: var(--ink); opacity:.08; }
+.walker-figure{ animation: walker-bob .3s ease-in-out infinite alternate; transform-origin:100px 100px; }
+@keyframes walker-bob{
+  from{ transform: translateY(0); }
+  to{ transform: translateY(-3px); }
 }
 .pony{ fill: var(--accent-2); }
 .head{ fill: #FFDFC7; stroke: var(--ink); stroke-width:1.6; }
-.eyes circle{ fill: var(--ink); transform-origin:center; transform-box:fill-box; animation: figure-blink 4.5s ease-in-out infinite; }
-@keyframes figure-blink{
-  0%, 92%, 100%{ transform: scaleY(1); }
-  95%{ transform: scaleY(.12); }
-}
 .smile{ fill:none; stroke: var(--ink); stroke-width:1.6; stroke-linecap:round; }
-.spine, .legs{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
-.arm line{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; transform-box:fill-box; }
-.arm--left{ transform-origin: 100px 80px; animation: type-left .7s ease-in-out infinite alternate; }
-.arm--right{ transform-origin: 100px 80px; animation: type-right .7s ease-in-out infinite alternate; animation-delay:.15s; }
-@keyframes type-left{ from{ transform: rotate(-2deg); } to{ transform: rotate(3deg); } }
-@keyframes type-right{ from{ transform: rotate(2deg); } to{ transform: rotate(-3deg); } }
-.laptop-base{ fill: var(--ink); }
-.laptop-screen{ fill: var(--panel); stroke: var(--ink); stroke-width:1.6; }
-.laptop-glow{ fill: var(--accent); opacity:.65; animation: glow-pulse 1.8s ease-in-out infinite; }
-@keyframes glow-pulse{ 0%,100%{ opacity:.4; } 50%{ opacity:.85; } }
-.sparkle{ fill: var(--accent-3); animation: sparkle-float 3.4s ease-in-out infinite; }
-.sparkle--a{ fill: var(--accent); animation-delay:0s; }
-.sparkle--b{ fill: var(--accent-2); animation-delay:.8s; }
-.sparkle--c{ fill: var(--accent-3); animation-delay:1.6s; }
-.sparkle--d{ fill: var(--accent-2); animation-delay:2.3s; }
-@keyframes sparkle-float{
-  0%, 100%{ transform: translateY(0); opacity:.3; }
-  50%{ transform: translateY(-8px); opacity:1; }
-}
-
-.about-story__text{ position:relative; padding-left:30px; }
-.about-story__text::before{
-  content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px;
-  background: linear-gradient(var(--accent), var(--accent-2), var(--accent-3)); opacity:.3;
-}
-.story-line{
-  position:relative; margin:0 0 24px; color: var(--ink); max-width:64ch;
-  opacity:0; transform: translateY(16px);
-  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.3,1);
-  transition-delay: calc(var(--i, 0) * 200ms);
-}
-.reveal.is-visible .story-line{ opacity:1; transform:none; }
-.story-line::before{
-  content:""; position:absolute; left:-30px; top:8px; width:9px; height:9px; border-radius:50%; background: var(--accent);
-}
-.story-line:nth-child(2)::before{ background: var(--accent-2); }
-.story-line:nth-child(3)::before{ background: var(--accent-3); }
-.story-line--lead::first-letter{
-  font-family:"Poppins", sans-serif; font-weight:800; font-size:2.6rem; line-height:.75;
-  float:left; margin:4px 8px 0 0;
-  background: var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-@media (max-width: 860px){
-  .about-story{ grid-template-columns: 1fr; }
-  .about-story__figure{ position:static; margin-bottom:8px; }
-  .figure-svg{ width:140px; height:140px; }
+.spine{ fill:none; stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
+.limb line{ stroke: var(--ink); stroke-width:2; stroke-linecap:round; }
+.leg-a{ transform-origin:100px 120px; animation: swing .3s ease-in-out infinite alternate; }
+.leg-b{ transform-origin:100px 120px; animation: swing-rev .3s ease-in-out infinite alternate; }
+.arm-a{ transform-origin:100px 80px; animation: swing-rev .3s ease-in-out infinite alternate; }
+.arm-b{ transform-origin:100px 80px; animation: swing .3s ease-in-out infinite alternate; }
+@keyframes swing{ from{ transform: rotate(-22deg); } to{ transform: rotate(22deg); } }
+@keyframes swing-rev{ from{ transform: rotate(22deg); } to{ transform: rotate(-22deg); } }
+@media (max-width: 640px){
+  .walk-strip{ height:90px; }
+  .walker{ width:48px; height:90px; }
 }
 @media (prefers-reduced-motion: reduce){
-  .figure, .eyes circle, .arm--left, .arm--right, .laptop-glow, .sparkle{ animation:none; }
+  .walker{ animation:none; left:6%; }
+  .walker-figure, .leg-a, .leg-b, .arm-a, .arm-b{ animation:none; }
 }
+
 .muted-inline{ color: var(--muted); font-weight:400; font-size:.85em; }
 .small{ font-size:.93rem; }
 .link{ color: var(--accent-2); text-decoration:none; }
@@ -336,7 +305,8 @@ h1,h2,h3{ font-family: "Poppins", system-ui, sans-serif; letter-spacing:-.01em; 
 }
 
 /* Contact */
-.contact{ display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.contact-lead{ max-width: 52ch; margin-top:2px; line-height:1.7; }
+.contact{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
 
 /* Footer */
 .footer{ border-top:1px solid var(--line); padding:26px 0; }
