@@ -31,7 +31,6 @@
       <nav class="nav__links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#spec-system">Case Study</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
@@ -176,115 +175,7 @@
               <span class="flow__node">UI</span>
             </div>
 
-            <p class="case__label">Specification Management System</p>
-            <ul class="bullets">
-              <li>Led the Specification Management System end-to-end — replaced a manual, Excel-based clinical-trial encoding workflow with a governed Draft → Publish → Promote application with versioning, audit trails, and role-based access. <a class="link" href="#spec-system">Full case study ↓</a></li>
-            </ul>
-
-            <p class="case__label">Reliability &amp; Production Engineering</p>
-            <ul class="bullets">
-              <li>Implemented append-only DynamoDB audit logging with Global Tables replication, tracking user actions and state changes for 2K+ users.</li>
-              <li>Engineered a 12-case E2E test suite (pytest, moto-based AWS mocking) preventing regression of a production data-integrity defect.</li>
-            </ul>
-
-            <p class="case__label">Impact</p>
-            <ul class="bullets">
-              <li>2K+ users across the platform</li>
-              <li>99.52% top-match auto-coding accuracy (98.46% on secondary matches)</li>
-              <li>5–6 hour incremental sync for updated clinical data</li>
-            </ul>
-            <div class="tags">
-              <span>AppSync/GraphQL</span><span>DynamoDB</span><span>Step Functions</span><span>Databricks</span><span>MuleSoft</span><span>pytest</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="log__entry">
-          <div class="log__meta">
-            <span class="log__date">Jun 2024 — Aug 2024</span>
-          </div>
-          <div class="log__card">
-            <header class="log__head">
-              <div class="log__org">
-                <span class="org-logo">BoA</span>
-                <div>
-                  <h3>Software Engineer II <span class="muted-inline">(Contract)</span></h3>
-                  <span class="muted">Bank of America · North Carolina, USA</span>
-                </div>
-              </div>
-            </header>
-            <ul class="bullets">
-              <li>Built checksum-based reconciliation engine to detect schema drift and silent data mismatches across Cards &amp; Payments DB migration.</li>
-              <li>Automated cross-database validation (referential integrity, data-type, record-level checks), cutting manual pre-cutover testing.</li>
-              <li>Generated structured exception reports and failure summaries, accelerating migration triage, remediation, and prod cutover decisions.</li>
-            </ul>
-            <div class="tags">
-              <span>Data Reconciliation</span><span>SQL</span><span>Migration Testing</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="log__entry">
-          <div class="log__meta">
-            <span class="log__date">Jun 2020 — Jan 2023</span>
-          </div>
-          <div class="log__card">
-            <header class="log__head">
-              <div class="log__org">
-                <span class="org-logo">BoA</span>
-                <div>
-                  <h3>Software Engineer I</h3>
-                  <span class="muted">Bank of America · Tamil Nadu, India</span>
-                </div>
-              </div>
-            </header>
-            <ul class="bullets">
-              <li>Orchestrated data processing for financial-risk datasets, parallelizing jobs across sharded workloads to cut pipeline runtime by 60%.</li>
-              <li>Reduced infrastructure costs 35% by redesigning always-on workflows into event-triggered pipelines, eliminating idle resource time.</li>
-              <li>Built backend microservices and REST APIs for data ingestion, validation, and processing, alongside the data-engineering pipeline work.</li>
-              <li>Developed reusable internal API components — connection pooling, transaction management, retry logic — abstracting connection and query logic across database systems and eliminating duplicated integration code for downstream teams.</li>
-              <li>Created a rule-based SQL translation microservice parsing legacy syntax and converting to target dialect, reducing manual migration effort by 70–80%.</li>
-              <li>Strengthened pipeline reliability by making processing steps idempotent and adding checkpointing so failed jobs resume, not restart.</li>
-              <li>Wrote unit and integration tests for REST endpoints and SQL transformations, and built CI/CD pipelines in Bitbucket automating build/test/deploy across dev, test, and prod.</li>
-              <li>Added request validation, centralized exception handling, and structured logging/metrics for observability; participated in code reviews, sprint planning, and production support.</li>
-            </ul>
-            <div class="tags">
-              <span>Spark</span><span>Event-Driven Pipelines</span><span>REST APIs</span><span>Bitbucket CI/CD</span><span>SQL</span><span>Idempotency</span>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="spec-system" class="section section--alt">
-    <div class="container reveal">
-      <p class="eyebrow">03 · Case Study</p>
-      <h2 class="section__title">Specification Management System</h2>
-      <p class="muted small" style="margin-bottom:24px;">Merck Sharp &amp; Dohme · Jan 2025 – Present</p>
-
-      <div class="case-grid">
-        <div class="case-block">
-          <p class="case__label">Problem</p>
-          <p class="body">Encoding specifications for clinical trials were managed through Excel and manual handoffs between business leads, technical architects, and encoding specialists — slow, error-prone, and impossible to audit.</p>
-        </div>
-        <div class="case-block">
-          <p class="case__label">My role</p>
-          <p class="body">Requirements gathering, architecture, implementation, UI design, and stakeholder demos — owned the product end-to-end from the first conversation with business leads through production rollout.</p>
-        </div>
-        <div class="case-block">
-          <p class="case__label">Architecture &amp; features</p>
-          <p class="body">Draft → Publish → Promote workflow with role-based access control, full audit history, versioning, and explicit approval states replacing ad-hoc spreadsheet edits.</p>
-        </div>
-        <div class="case-block">
-          <p class="case__label">Engineering decisions</p>
-          <p class="body">Avoided redundant file storage by sending raw data instead of Excel exports; separated approval concerns into distinct workflow states; kept scope manageable as requirements shifted with the customer's evolving organizational model.</p>
-        </div>
-      </div>
-
-      <p class="case__label" style="margin-top:8px;">Impact</p>
-      <p class="body">Replaced a fully manual, spreadsheet-based workflow with a governed application — bringing versioning, audit trails, and role-based access to a process that previously had none.</p>
-    </div>
+          
   </section>
 
   <section id="projects" class="section">
