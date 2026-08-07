@@ -310,22 +310,21 @@ p.small + .case__label{ margin-top:16px; }
 .case-block .body{ max-width:none; }
 
 .flow{
-  display:flex; flex-direction:column; align-items:flex-start;
-  gap:0; margin:12px 0 18px;
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:6px 0; margin:10px 0 16px; row-gap:8px;
 }
-.flow--sm{ margin:8px 0 14px; }
+.flow--sm{ margin:8px 0 12px; }
+.flow__step{ display:inline-flex; align-items:center; gap:6px; }
 .flow__node{
   background: var(--panel); border:1px solid var(--line); border-radius:8px;
-  padding:8px 14px; font-size:.78rem; font-weight:600; color: var(--ink);
-  display:inline-block;
+  padding:7px 13px; font-size:.78rem; font-weight:600; color: var(--ink);
+  white-space:nowrap;
 }
-.flow--sm .flow__node{ font-size:.72rem; padding:6px 12px; }
+.flow--sm .flow__node{ font-size:.72rem; padding:6px 11px; }
 .flow__arrow{
   color: var(--accent-2); font-weight:700; font-size:.9rem;
-  display:flex; align-items:center; justify-content:center;
-  width:32px; height:22px; transform:rotate(90deg);
+  margin:0 6px 0 0; flex:none;
 }
-.flow--sm .flow__arrow{ width:26px; height:18px; font-size:.8rem; }
 
 .tags--core span{
   background: var(--grad); color:#fff; border-color:transparent;
